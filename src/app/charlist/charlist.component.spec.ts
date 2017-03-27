@@ -34,8 +34,8 @@ describe('CharlistComponent', () => {
 
         expect(liList).toBeTruthy();
         expect(liList.length).toBe(3);
-        expect(liList[0].textContent).toBe('Hans');
-        expect(liList[1].textContent).toBe('Paul');
-        expect(liList[2].textContent).toBe('Willi');
+        expect(liList[0].textContent.trim()).toBe('Hans');
+        expect(liList[1].textContent.trim()).toBe('Paul');
+        expect(liList[2].textContent.trim()).toBe('Willi');
     }));
 });
