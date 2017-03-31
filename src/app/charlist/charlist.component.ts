@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CharService} from "../charservice/char.service";
-import {Charakter} from "../charakter";
+import {Charakter} from "../domain/charakter";
+import {DomainService} from "../domainservice/domain.service";
 
 @Component({
     selector: 'app-charlist',
@@ -9,12 +10,14 @@ import {Charakter} from "../charakter";
     providers: [CharService]
 })
 export class CharlistComponent implements OnInit {
-    private charlist: Charakter[];
-
-    constructor(private charService: CharService) {
+    constructor(public domainService: DomainService) {
     }
 
     ngOnInit() {
-        this.charlist = this.charService.getChars();
+        this.domainService.loadCharakters();
+    }
+
+    onSelect(charakter:Charakter){
+        this.domainService.currentCharakter = charakter;
     }
 }

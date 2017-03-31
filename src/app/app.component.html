@@ -1,3 +1,11 @@
-<h1>{{title}}</h1>
-Wähle den Charakter den du verbessern möchtest
-<app-charlist></app-charlist>
+<h2>{{title}}</h2>
+
+
+<nav>
+    <a routerLink="/charlist" routerLinkActive="active">Auswahl</a>
+    <a routerLink="/faehigkeiten" routerLinkActive="active">Fähigkeiten</a>
+    <a routerLink="/waffen" routerLinkActive="active">Waffen</a>
+    <a routerLink="/zauber" routerLinkActive="active">Zauber</a>
+</nav>
+
+<router-outlet></router-outlet>

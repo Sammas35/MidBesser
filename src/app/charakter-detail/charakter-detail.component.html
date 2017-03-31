@@ -1,0 +1,9 @@
+<div *ngIf="charakter">
+  <div><label>Name : </label> <input type="text" [(ngModel)]="charakter.name"/></div>
+  <div>
+    <label>Klasse : </label>
+    <select [(ngModel)]="charakter.abenteuertyp">
+      <option *ngFor="let abenteuertyp of abenteuertypChoice" [ngValue]="abenteuertyp">{{abenteuertyp.name}}</option>
+    </select>
+  </div>
+</div>

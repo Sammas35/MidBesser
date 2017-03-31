@@ -1,6 +1,9 @@
 <ul>
-    <li *ngFor="let charakter of charlist" class="charinlist">
-        {{charakter.name}}
+    <li *ngFor="let charakter of domainService.charakterList"
+        (click)="onSelect(charakter)"
+        class="charinlist">
+        {{charakter.name}}, {{charakter.abenteuertyp.name}}
     </li>
 </ul>
 
+<app-charakter-detail [charakter]="domainService.currentCharakter"></app-charakter-detail>
