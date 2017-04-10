@@ -3,6 +3,7 @@ import {DomainService} from "../domainservice/domain.service";
 import {SKILLS} from "../data/skills";
 import {Charakter} from "../domain/charakter";
 import {Faehigkeit} from "../domain/faehigkeit";
+import {Verbesserung} from "../domain/verbesserung";
 
 @Component({
     selector: 'app-faehigkeiten',
@@ -31,7 +32,14 @@ export class FaehigkeitenComponent implements OnInit {
         this.move(faehigkeit, this.charakter.faehigkeitenList, this.charakter.faehigkeitenWunschList);
     }
     remove(faehigkeit : Faehigkeit){
+        if(faehigkeit.erfolgswert) {
+            return;
+        }
         this.move(faehigkeit, this.charakter.faehigkeitenWunschList, this.charakter.faehigkeitenList);
+    }
+
+    lerne(verbesserung:Verbesserung){
+        verbesserung.gelernt = !verbesserung.gelernt;
     }
 
     private move(faehigkeit: Faehigkeit, source:Faehigkeit[], target:Faehigkeit[]) {

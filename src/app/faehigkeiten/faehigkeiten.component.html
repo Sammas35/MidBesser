@@ -11,11 +11,35 @@
     </div>
     <div class="w3-col m6 l6">
         <h2>Lernliste</h2>
-        <div *ngFor="let faehigkeit of charakter.faehigkeitenWunschList"
-             class="faehigkeit w3-row"
-             [ngClass]="{'grund':faehigkeit.faktor<1, 'ausnahme':faehigkeit.faktor>1}"
-             (click)=remove(faehigkeit)>
-            <div class="w3-col m6 l6">{{faehigkeit.name}}</div>
+        <div *ngFor="let faehigkeit of charakter.faehigkeitenWunschList">
+            <div
+                    [ngClass]="{'grund':faehigkeit.faktor<1, 'ausnahme':faehigkeit.faktor>1}">
+                <div class="faehigkeit w3-row"
+                     (click)=remove(faehigkeit)>
+                    <div class="w3-col m4 l4">{{faehigkeit.name}}
+                    </div>
+                    <div class="w3-col m2 l2">{{faehigkeit.startwert}}<span *ngIf="!faehigkeit.startwert">&nbsp;</span>
+                    </div>
+                    <div class="w3-col m3 l3">{{faehigkeit.erstkosten}}</div>
+                    <div class="w3-col m3 l3">x</div>
+                </div>
+                <div class="faehigkeit w3-row"
+                     *ngFor="let verbesserung of faehigkeit.geplanteStufen"
+                     (click)="lerne(verbesserung)">
+                    <div class="w3-col m4 l4">&nbsp;</div>
+                    <div class="w3-col m2 l2">{{verbesserung.erfolgswert}}</div>
+                    <div class="w3-col m3 l3">{{verbesserung.kosten}}</div>
+                    <div class="w3-col m3 l3">x</div>
+                </div>
+                <div class="faehigkeit w3-row"
+                     *ngFor="let verbesserung of faehigkeit.offeneStufen"
+                     (click)="lerne(verbesserung)">
+                    <div class="w3-col m4 l4">&nbsp;</div>
+                    <div class="w3-col m2 l2">{{verbesserung.erfolgswert}}</div>
+                    <div class="w3-col m3 l3">{{verbesserung.kosten}}</div>
+                    <div class="w3-col m3 l3">-</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

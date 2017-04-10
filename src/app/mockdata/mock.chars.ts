@@ -6,7 +6,11 @@ export const CHARS: any[] = [
         name: 'Hans',
         abenteuertyp: ABENTEUERTYPEN.Soeldner,
         faehigkeitenList:[],
-        faehigkeitenWunschList:[]
+        faehigkeitenWunschList:[],
+        faehigkeitenGelerntList:[{
+            "name": "beidhändiger Kampf",
+            "erfolgswert": "-4",
+        }]
     }, {
         name: 'Paul',
         abenteuertyp: ABENTEUERTYPEN.Magier,
