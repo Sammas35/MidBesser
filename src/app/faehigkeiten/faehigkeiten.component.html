@@ -1,11 +1,21 @@
 <div class="w3-row">
     <div class="w3-col m6 l6">
         <h2>Fähigkeiten</h2>
-        <div *ngFor="let faehigkeit of charakter.faehigkeitenList">
-            {{faehigkeit.name}}
+        <div *ngFor="let faehigkeit of charakter.faehigkeitenList"
+             class="faehigkeit w3-row"
+             [ngClass]="{'grund':faehigkeit.faktor<1, 'ausnahme':faehigkeit.faktor>1}"
+             (click)=add(faehigkeit)>
+            <div class="w3-col m6 l6">{{faehigkeit.name}}</div>
+            <div class="w3-col m6 l6">{{faehigkeit.erstkosten}}</div>
         </div>
     </div>
     <div class="w3-col m6 l6">
         <h2>Lernliste</h2>
+        <div *ngFor="let faehigkeit of charakter.faehigkeitenWunschList"
+             class="faehigkeit w3-row"
+             [ngClass]="{'grund':faehigkeit.faktor<1, 'ausnahme':faehigkeit.faktor>1}"
+             (click)=remove(faehigkeit)>
+            <div class="w3-col m6 l6">{{faehigkeit.name}}</div>
+        </div>
     </div>
 </div>

@@ -21,8 +21,27 @@ export class FaehigkeitenComponent implements OnInit {
         if(this.charakter) {
             console.log(this.charakter);
             SKILLS.forEach((skill) => {
-                this.charakter.assignFaehigkeit(<Faehigkeit>skill);
+                this.charakter.assignFaehigkeit(Faehigkeit.deserialize(<Faehigkeit>skill));
             });
         }
+    }
+
+
+    add(faehigkeit : Faehigkeit){
+        this.move(faehigkeit, this.charakter.faehigkeitenList, this.charakter.faehigkeitenWunschList);
+    }
+    remove(faehigkeit : Faehigkeit){
+        this.move(faehigkeit, this.charakter.faehigkeitenWunschList, this.charakter.faehigkeitenList);
+    }
+
+    private move(faehigkeit: Faehigkeit, source:Faehigkeit[], target:Faehigkeit[]) {
+        let index;
+
+        index = source.indexOf(faehigkeit);
+        if (index > -1) {
+            source.splice(index, 1);
+        }
+        target.push(faehigkeit);
+        target.sort((f1, f2) => f1.name.localeCompare(f2.name));
     }
 }

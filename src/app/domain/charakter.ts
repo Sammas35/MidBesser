@@ -8,6 +8,9 @@ export class Charakter {
     faehigkeitenWunschList: Faehigkeit[];
 
     public assignFaehigkeit(faehigkeit: Faehigkeit) {
+
+        faehigkeit.adjustLernkosten(this.abenteuertyp.kuerzel);
+
         this.getFaehigkeitenList().push(faehigkeit);
     }
 
@@ -19,14 +22,15 @@ export class Charakter {
     }
 
     public static deserialize(charakter:Charakter):Charakter {
-        var result:Charakter;
+        let result: Charakter;
 
         result = new Charakter();
 
         result.name = charakter.name;
         result.abenteuertyp = ABENTEUERTYPEN_LIST.find((abenteuertyp) => abenteuertyp.kuerzel === charakter.abenteuertyp.kuerzel);
+        result.faehigkeitenList = [];
+        result.faehigkeitenWunschList = [];
 
         return result;
     }
-
 }

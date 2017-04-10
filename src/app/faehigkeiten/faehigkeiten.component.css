@@ -1,0 +1,14 @@
+.faehigkeit{
+    cursor: pointer;
+}
+
+.faehigkeit:hover{
+    border: 1px solid grey;
+}
+
+.grund{
+    font-weight: 600;
+}
+.ausnahme{
+    font-style:italic;
+}

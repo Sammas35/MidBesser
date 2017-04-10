@@ -3,9 +3,9 @@
 
 <nav>
     <a routerLink="/charlist" routerLinkActive="active">Auswahl</a>
-    <a routerLink="/faehigkeiten" routerLinkActive="active">Fähigkeiten</a>
-    <a routerLink="/waffen" routerLinkActive="active">Waffen</a>
-    <a routerLink="/zauber" routerLinkActive="active">Zauber</a>
+    <a routerLink="/faehigkeiten" routerLinkActive="active" [class.disabled]="domainService.currentCharakter ? null : true">Fähigkeiten</a>
+    <a routerLink="/waffen" routerLinkActive="active" [class.disabled]="domainService.currentCharakter ? null : true">Waffen</a>
+    <a routerLink="/zauber" routerLinkActive="active" [class.disabled]="domainService.currentCharakter ? null : true">Zauber</a>
 </nav>
 
 <router-outlet></router-outlet>
