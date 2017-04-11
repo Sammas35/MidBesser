@@ -9,6 +9,7 @@ export class Faehigkeit {
     grund: string[];
     ausnahme: string[];
     geplanteStufen: Verbesserung[];
+    offeneStufen: Verbesserung[];
     verbesserungen: Verbesserung[];
 
     public static deserialize(faehigkeit: Faehigkeit): Faehigkeit {
@@ -22,6 +23,8 @@ export class Faehigkeit {
         result.grund = faehigkeit.grund ? faehigkeit.grund.slice() : [];
         result.ausnahme = faehigkeit.ausnahme ? faehigkeit.ausnahme.slice() : [];
         result.verbesserungen = faehigkeit.verbesserungen ? faehigkeit.verbesserungen.slice() : [];
+        result.offeneStufen = [].concat(result.verbesserungen);
+        result.geplanteStufen = [];
 
         return result;
     }
@@ -44,5 +47,49 @@ export class Faehigkeit {
             this.verbesserungen = this.verbesserungen.slice(0, index);
         }
         this.verbesserungen.forEach((f) => f.kosten *= this.faktor);
+    }
+
+    entferneBis(verbesserung: Verbesserung) {
+        let stufePos:number;
+        let stufen:Array<Verbesserung>;
+
+        stufePos = this.geplanteStufen.findIndex((v)=> {
+            return v === verbesserung;
+        });
+
+        if (stufePos == -1) {
+            return;
+        }
+
+        stufen = this.geplanteStufen.splice(stufePos);
+        this.offeneStufen = stufen.concat(this.offeneStufen);
+    }
+
+    lerneBis(verbesserung: Verbesserung) {
+        let stufePos:number;
+        let stufen:Array<Verbesserung>;
+
+        stufePos = this.offeneStufen.findIndex((v)=> {
+            return v === verbesserung;
+        });
+
+        if (stufePos == -1) {
+            return;
+        }
+
+        stufen = this.offeneStufen.splice(0, stufePos + 1);
+        this.geplanteStufen = this.geplanteStufen.concat(stufen);
+    }
+
+    berechneGeplanteKosten(): number {
+        let kosten : number = 0;
+
+        if(!this.erfolgswert){
+            kosten += this.erstkosten;
+        }
+
+        this.geplanteStufen.forEach(v => kosten += v.kosten);
+
+        return kosten;
     }
 }

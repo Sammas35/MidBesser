@@ -13,6 +13,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 import {RouterModule} from "@angular/router";
 import {HttpModule} from "@angular/http";
 import {BrowserModule} from "@angular/platform-browser";
+import {Charakter} from "../domain/charakter";
 
 export const TEST_CONFIG = {
     declarations: [AppComponent,

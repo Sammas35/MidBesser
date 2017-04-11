@@ -1,4 +1,4 @@
-<div class="w3-row">
+<div class="w3-row" *ngIf="charakter">
     <div class="w3-col m6 l6">
         <h2>Fähigkeiten</h2>
         <div *ngFor="let faehigkeit of charakter.faehigkeitenList"
@@ -11,33 +11,38 @@
     </div>
     <div class="w3-col m6 l6">
         <h2>Lernliste</h2>
+        Kosten : {{berechneGeplanteKosten()}}
         <div *ngFor="let faehigkeit of charakter.faehigkeitenWunschList">
             <div
                     [ngClass]="{'grund':faehigkeit.faktor<1, 'ausnahme':faehigkeit.faktor>1}">
+
                 <div class="faehigkeit w3-row"
                      (click)=remove(faehigkeit)>
-                    <div class="w3-col m4 l4">{{faehigkeit.name}}
+                    <div class="w3-col m5 l5">{{faehigkeit.name}}</div>
+                    <div class="w3-col m1 l1" *ngIf="!faehigkeit.erfolgswert">{{faehigkeit.startwert}}<span *ngIf="!faehigkeit.startwert">&nbsp;</span>
                     </div>
-                    <div class="w3-col m2 l2">{{faehigkeit.startwert}}<span *ngIf="!faehigkeit.startwert">&nbsp;</span>
-                    </div>
-                    <div class="w3-col m3 l3">{{faehigkeit.erstkosten}}</div>
-                    <div class="w3-col m3 l3">x</div>
+                    <div class="w3-col m1 l1" *ngIf="!faehigkeit.erfolgswert">{{faehigkeit.erstkosten}}</div>
+                    <div class="w3-col m1 l1" *ngIf="!faehigkeit.erfolgswert">x</div>
+                    <div class="w3-col m3 l3" *ngIf="faehigkeit.erfolgswert">&nbsp;</div>
+                    <div class="w3-col m4 l4">{{faehigkeit.berechneGeplanteKosten()}}</div>
                 </div>
                 <div class="faehigkeit w3-row"
                      *ngFor="let verbesserung of faehigkeit.geplanteStufen"
-                     (click)="lerne(verbesserung)">
+                     (click)="entferne(faehigkeit, verbesserung)">
+                    <div class="w3-col m5 l5">&nbsp;</div>
+                    <div class="w3-col m1 l1">{{verbesserung.erfolgswert}}</div>
+                    <div class="w3-col m1 l1">{{verbesserung.kosten}}</div>
+                    <div class="w3-col m1 l1">x</div>
                     <div class="w3-col m4 l4">&nbsp;</div>
-                    <div class="w3-col m2 l2">{{verbesserung.erfolgswert}}</div>
-                    <div class="w3-col m3 l3">{{verbesserung.kosten}}</div>
-                    <div class="w3-col m3 l3">x</div>
                 </div>
                 <div class="faehigkeit w3-row"
                      *ngFor="let verbesserung of faehigkeit.offeneStufen"
-                     (click)="lerne(verbesserung)">
+                     (click)="lerne(faehigkeit, verbesserung)">
+                    <div class="w3-col m5 l5">&nbsp;</div>
+                    <div class="w3-col m1 l1">{{verbesserung.erfolgswert}}</div>
+                    <div class="w3-col m1 l1">{{verbesserung.kosten}}</div>
+                    <div class="w3-col m1 l1">-</div>
                     <div class="w3-col m4 l4">&nbsp;</div>
-                    <div class="w3-col m2 l2">{{verbesserung.erfolgswert}}</div>
-                    <div class="w3-col m3 l3">{{verbesserung.kosten}}</div>
-                    <div class="w3-col m3 l3">-</div>
                 </div>
             </div>
         </div>

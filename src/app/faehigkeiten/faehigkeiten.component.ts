@@ -31,6 +31,7 @@ export class FaehigkeitenComponent implements OnInit {
     add(faehigkeit : Faehigkeit){
         this.move(faehigkeit, this.charakter.faehigkeitenList, this.charakter.faehigkeitenWunschList);
     }
+
     remove(faehigkeit : Faehigkeit){
         if(faehigkeit.erfolgswert) {
             return;
@@ -38,8 +39,22 @@ export class FaehigkeitenComponent implements OnInit {
         this.move(faehigkeit, this.charakter.faehigkeitenWunschList, this.charakter.faehigkeitenList);
     }
 
-    lerne(verbesserung:Verbesserung){
-        verbesserung.gelernt = !verbesserung.gelernt;
+    entferne(faehigkeit: Faehigkeit, verbesserung:Verbesserung){
+        faehigkeit.entferneBis(verbesserung);
+    }
+
+    lerne(faehigkeit: Faehigkeit, verbesserung:Verbesserung){
+        faehigkeit.lerneBis(verbesserung);
+    }
+
+    berechneGeplanteKosten():number{
+        let kosten : number;
+
+        kosten = this.charakter.faehigkeitenWunschList.reduce((prev, curr)=> {
+            return prev += curr.berechneGeplanteKosten();
+        }, 0);
+
+        return kosten;
     }
 
     private move(faehigkeit: Faehigkeit, source:Faehigkeit[], target:Faehigkeit[]) {
