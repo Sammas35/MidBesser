@@ -1,6 +1,12 @@
 {
   "name": "midbesser",
   "version": "0.0.0",
+  "description": "a famous midbesser software, really",
+  "author": "Sam",
+  "main": "electron.js",
+  "build": {
+    "appId": "sammas.midbesser"
+  },
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,7 +17,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-electron": "ng build --base-href . && copy src\\electron\\* dist",
-    "electron": "npm run build-electron && electron dist"
+    "electron": "npm run build-electron && electron dist",
+    "deploy-electron": "npm run build-electron && build --ia32 --projectDir=dist"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +40,8 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
+    "electron": "^1.6.2",
+    "electron-builder": "^16.8.2",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",

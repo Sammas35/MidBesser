@@ -1,5 +1,18 @@
 {
-  "name"    : "angular-electron",
-  "version" : "0.1.0",
-  "main"    : "electron.js"
+  "name": "angular-electron",
+  "version": "0.1.0",
+  "description": "a famous midbesser software, really",
+  "author": "Sam",
+  "main": "electron.js",
+  "build": {
+    "appId": "sammas.midbesser"
+  },
+  "scripts": {
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-builder": "^16.8.2"
+  }
 }
