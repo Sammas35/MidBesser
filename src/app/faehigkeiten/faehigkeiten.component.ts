@@ -51,7 +51,7 @@ export class FaehigkeitenComponent implements OnInit {
         let kosten : number;
 
         kosten = this.charakter.faehigkeitenWunschList.reduce((prev, curr)=> {
-            return prev += curr.berechneGeplanteKosten();
+            return prev + curr.berechneGeplanteKosten();
         }, 0);
 
         return kosten;
