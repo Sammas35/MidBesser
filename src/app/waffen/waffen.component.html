@@ -1,3 +1,16 @@
-<p>
-  waffen works!
-</p>
+<div class="w3-row"
+     *ngIf="charakter">
+    <div class="w3-col m6 l6">
+        <h2>Waffen</h2>
+        <div *ngFor="let grundkenntnis of charakter.waffenList"
+             [ngClass]="{'grund':grundkenntnis.faktor<1, 'ausnahme':grundkenntnis.faktor>1}">
+            {{grundkenntnis.name}}
+            <div *ngFor="let waffe of grundkenntnis.waffen" style="padding-left: 15px;">
+                {{waffe.name}}
+            </div>
+        </div>
+    </div>
+    <div class="w3-col m6 l6">
+        <h2>Lernliste</h2>
+    </div>
+</div>

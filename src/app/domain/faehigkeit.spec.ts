@@ -2,7 +2,7 @@ import {Faehigkeit} from './faehigkeit';
 import {SKILLS} from "../data/skills";
 import {Verbesserung} from "./verbesserung";
 
-fdescribe('Faehigkeit', () => {
+describe('Faehigkeit', () => {
     it('should create an instance', () => {
         expect(new Faehigkeit()).toBeTruthy();
     });

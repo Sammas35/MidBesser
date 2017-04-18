@@ -1,7 +1,7 @@
 import {Verbesserung} from "./verbesserung";
+import {LernEntity} from "./lern-entity";
 
-export class Faehigkeit {
-    name: string;
+export class Faehigkeit extends LernEntity {
     erfolgswert: string;
     erstkosten: number;
     startwert: string;
@@ -91,5 +91,9 @@ export class Faehigkeit {
         this.geplanteStufen.forEach(v => kosten += v.kosten);
 
         return kosten;
+    }
+
+    isGelernt() :boolean{
+        return !(this.erfolgswert);
     }
 }

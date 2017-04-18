@@ -4,17 +4,21 @@ import {SKILLS} from "../data/skills";
 import {Charakter} from "../domain/charakter";
 import {Faehigkeit} from "../domain/faehigkeit";
 import {Verbesserung} from "../domain/verbesserung";
+import {WAFFEN} from "../data/waffen";
+import {Waffengrundkenntnis} from "../domain/waffengrundkenntnis";
+import {LernComponent} from "../components/lern-component";
 
 @Component({
     selector: 'app-faehigkeiten',
     templateUrl: './faehigkeiten.component.html',
     styleUrls: ['./faehigkeiten.component.css']
 })
-export class FaehigkeitenComponent implements OnInit {
+export class FaehigkeitenComponent extends LernComponent implements OnInit {
 
     charakter : Charakter;
 
     constructor(protected domainService: DomainService) {
+        super(domainService.currentCharakter.faehigkeitenList, domainService.currentCharakter.faehigkeitenWunschList);
         this.charakter = domainService.currentCharakter;
     }
 
@@ -25,18 +29,6 @@ export class FaehigkeitenComponent implements OnInit {
                 this.charakter.assignFaehigkeit(Faehigkeit.deserialize(<Faehigkeit>skill));
             });
         }
-    }
-
-
-    add(faehigkeit : Faehigkeit){
-        this.move(faehigkeit, this.charakter.faehigkeitenList, this.charakter.faehigkeitenWunschList);
-    }
-
-    remove(faehigkeit : Faehigkeit){
-        if(faehigkeit.erfolgswert) {
-            return;
-        }
-        this.move(faehigkeit, this.charakter.faehigkeitenWunschList, this.charakter.faehigkeitenList);
     }
 
     entferne(faehigkeit: Faehigkeit, verbesserung:Verbesserung){
@@ -55,16 +47,5 @@ export class FaehigkeitenComponent implements OnInit {
         }, 0);
 
         return kosten;
-    }
-
-    private move(faehigkeit: Faehigkeit, source:Faehigkeit[], target:Faehigkeit[]) {
-        let index;
-
-        index = source.indexOf(faehigkeit);
-        if (index > -1) {
-            source.splice(index, 1);
-        }
-        target.push(faehigkeit);
-        target.sort((f1, f2) => f1.name.localeCompare(f2.name));
     }
 }
