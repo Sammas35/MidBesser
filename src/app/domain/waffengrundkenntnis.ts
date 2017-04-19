@@ -78,4 +78,10 @@ export class Waffengrundkenntnis extends LernEntity {
     isGelernt() {
         return this.waffen.some((w)=>w.isGelernt());
     }
+
+    addWaffe(waffe: Waffe) {
+        if(!this.waffen.some((w)=>w.name === waffe.name)){
+            this.waffen.push(waffe);
+        }
+    }
 }

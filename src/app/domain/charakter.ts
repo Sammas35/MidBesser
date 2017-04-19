@@ -10,7 +10,7 @@ export class Charakter extends NamedEntity{
     faehigkeitenWunschList: Faehigkeit[];
     waffenGelerntList:Waffengrundkenntnis[];
     waffenList: Waffengrundkenntnis[] = [];
-    waffenWunschList: Waffengrundkenntnis[];
+    waffenWunschList: Waffengrundkenntnis[] = [];
 
     assignWaffe(waffengrundkenntnis: Waffengrundkenntnis) {
 
