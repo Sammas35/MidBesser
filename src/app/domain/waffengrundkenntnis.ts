@@ -1,9 +1,6 @@
 import {Waffe} from "./waffe";
 import {LernEntity} from "./lern-entity";
 export class Waffengrundkenntnis extends LernEntity {
-    kosten:number;
-    faktor: number = 1;
-
     waffen:Waffe[];
     private static grund:Array<string> = [
         "Kr",
@@ -38,17 +35,20 @@ export class Waffengrundkenntnis extends LernEntity {
         "Th",
     ];
 
-    public static deserialize(waffengrundkenntnis: Waffengrundkenntnis):Waffengrundkenntnis {
+    public static deserialize(waffengrundkenntnis: Waffengrundkenntnis, abenteurtypKuerzel:string, kind : string):Waffengrundkenntnis {
         let result;
+        let faktor;
 
         result = new Waffengrundkenntnis();
 
+        faktor = result.getFaktor(abenteurtypKuerzel);
         result.name = waffengrundkenntnis.name;
-        result.kosten = waffengrundkenntnis.kosten;
+
+        result.erstkosten = waffengrundkenntnis.erstkosten * faktor;
 
         result.waffen = [];
 
-        waffengrundkenntnis.waffen.forEach((w) => result.waffen.push(Waffe.deserialize(w)));
+        waffengrundkenntnis.waffen.forEach((w) => result.waffen.push(Waffe.deserialize(w, faktor, kind)));
 
         return result;
     }
@@ -56,7 +56,7 @@ export class Waffengrundkenntnis extends LernEntity {
     adjustLernkosten(kuerzel: string) {
         this.faktor = this.getFaktor(kuerzel);
 
-        this.kosten *= this.faktor;
+        this.erstkosten *= this.faktor;
     }
 
     private getFaktor(kuerzel: string):number {
@@ -82,6 +82,31 @@ export class Waffengrundkenntnis extends LernEntity {
     addWaffe(waffe: Waffe) {
         if(!this.waffen.some((w)=>w.name === waffe.name)){
             this.waffen.push(waffe);
+            this.waffen.sort((a, b) => a.name.localeCompare(b.name));
         }
+    }
+
+    removeWaffe(waffe: Waffe) {
+        let index:number;
+
+        index = this.waffen.indexOf(waffe);
+
+        if(index >= 0) {
+            this.waffen.splice(index, 1);
+        }
+    }
+
+    berechneGeplanteKosten(): number {
+        let kosten : number = 0;
+
+        if(!this.erfolgswert){
+            kosten += this.erstkosten;
+        }
+
+        kosten = this.waffen.reduce((prev, curr)=> {
+            return prev + curr.berechneGeplanteKosten();
+        }, kosten);
+
+        return kosten;
     }
 }

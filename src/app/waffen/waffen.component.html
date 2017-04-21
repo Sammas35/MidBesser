@@ -4,23 +4,30 @@
         <h2>Waffen</h2>
         <div *ngFor="let grundkenntnis of charakter.waffenList"
              [ngClass]="{'grund':grundkenntnis.faktor<1, 'ausnahme':grundkenntnis.faktor>1}">
-            {{grundkenntnis.name}}
+            <div class="w3-row">
+                <div class="w3-col m6 l6">{{grundkenntnis.name}}</div>
+                <div class="w3-col m6 l6">{{grundkenntnis.erstkosten}}</div>
+            </div>
             <div *ngFor="let waffe of grundkenntnis.waffen"
                  style="padding-left: 15px;"
-                 (click)="add(waffe, grundkenntnis)">
+                 class="w3-row"
+                 (click)="addWaffe(waffe, grundkenntnis)">
                 {{waffe.name}}
             </div>
         </div>
     </div>
     <div class="w3-col m6 l6">
         <h2>Lernliste</h2>
+        Kosten : {{berechneGeplanteKosten()}}
         <div *ngFor="let grundkenntnis of charakter.waffenWunschList"
              [ngClass]="{'grund':grundkenntnis.faktor<1, 'ausnahme':grundkenntnis.faktor>1}">
-            {{grundkenntnis.name}}
-            <div *ngFor="let waffe of grundkenntnis.waffen"
-                 style="padding-left: 15px;">
-                 <!--(click)="add(waffe, grundkenntnis)">-->
-                {{waffe.name}}
+            <div *ngIf="grundkenntnis.waffen.length>0">
+                <span>{{grundkenntnis.name}}</span>
+                <div *ngFor="let waffe of grundkenntnis.waffen"
+                     style="padding-left: 15px;">
+                    <app-lern (remove)="removeWaffe($event, grundkenntnis)"
+                              [lern]="waffe"></app-lern>
+                </div>
             </div>
         </div>
     </div>

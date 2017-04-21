@@ -1,0 +1,28 @@
+<div class="faehigkeit w3-row"
+     (click)=triggerRemoveEvent(lern)>
+  <div class="w3-col m5 l5">{{lern.name}}</div>
+  <div class="w3-col m1 l1" *ngIf="!lern.erfolgswert">{{lern.startwert}}<span *ngIf="!lern.startwert">&nbsp;</span>
+  </div>
+  <div class="w3-col m1 l1" *ngIf="!lern.erstkosten">{{lern.erstkosten}}</div>
+  <div class="w3-col m1 l1" *ngIf="!lern.erfolgswert">x</div>
+  <div class="w3-col m3 l3" *ngIf="lern.erfolgswert">&nbsp;</div>
+  <div class="w3-col m4 l4">{{lern.berechneGeplanteKosten()}}</div>
+</div>
+<div class="faehigkeit w3-row"
+     *ngFor="let verbesserung of lern.geplanteStufen"
+     (click)="entferne(lern, verbesserung)">
+  <div class="w3-col m5 l5">&nbsp;</div>
+  <div class="w3-col m1 l1">{{verbesserung.erfolgswert}}</div>
+  <div class="w3-col m1 l1">{{verbesserung.kosten}}</div>
+  <div class="w3-col m1 l1">x</div>
+  <div class="w3-col m4 l4">&nbsp;</div>
+</div>
+<div class="faehigkeit w3-row"
+     *ngFor="let verbesserung of lern.offeneStufen"
+     (click)="lerne(lern, verbesserung)">
+  <div class="w3-col m5 l5">&nbsp;</div>
+  <div class="w3-col m1 l1">{{verbesserung.erfolgswert}}</div>
+  <div class="w3-col m1 l1">{{verbesserung.kosten}}</div>
+  <div class="w3-col m1 l1">-</div>
+  <div class="w3-col m4 l4">&nbsp;</div>
+</div>

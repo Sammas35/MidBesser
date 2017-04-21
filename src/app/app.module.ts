@@ -13,6 +13,7 @@ import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import {DomainService} from "./domainservice/domain.service";
 import {CharService} from "./charservice/char.service";
+import { LernComponent } from './lern/lern.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import {CharService} from "./charservice/char.service";
         CharakterDetailComponent,
         FaehigkeitenComponent,
         WaffenComponent,
-        ZauberComponent
+        ZauberComponent,
+        LernComponent
     ],
     imports: [
         BrowserModule,

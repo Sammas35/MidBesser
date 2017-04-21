@@ -1,4 +1,5 @@
 import {Waffengrundkenntnis} from "./waffengrundkenntnis";
+import {Waffe} from "./waffe";
 
 fdescribe('Waffengrundkenntnis', () => {
     it('should create an instance', () => {
@@ -10,7 +11,7 @@ fdescribe('Waffengrundkenntnis', () => {
         it('should deserialize a json', function () {
             let json = {
                 "name": "Einhandschwerter",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Langschwert",
@@ -25,13 +26,14 @@ fdescribe('Waffengrundkenntnis', () => {
                         "schwierigkeit": 4
                     }
                 ]
-            }
+            };
             let grundkenntnis: Waffengrundkenntnis;
 
-            grundkenntnis = Waffengrundkenntnis.deserialize(<Waffengrundkenntnis>json);
+            grundkenntnis = Waffengrundkenntnis.deserialize(<Waffengrundkenntnis>json, 'Sö', 'angriff');
 
             expect(grundkenntnis.name).toBe('Einhandschwerter');
-            expect(grundkenntnis.kosten).toBe(500);
+            expect(grundkenntnis.erfolgswert).toBeUndefined();
+            expect(grundkenntnis.erstkosten).toBe(250);
             expect(grundkenntnis.waffen.length).toBe(2);
             expect(grundkenntnis.waffen[0].name).toBe('Langschwert');
             expect(grundkenntnis.waffen[1].name).toBe('Krummsäbel');
@@ -42,63 +44,137 @@ fdescribe('Waffengrundkenntnis', () => {
         it('should adjust kosten of waffengrundkenntnis', function () {
             let grundkenntnis: Waffengrundkenntnis = new Waffengrundkenntnis();
 
-            grundkenntnis.kosten = 4000;
+            grundkenntnis.erstkosten = 4000;
 
             grundkenntnis.adjustLernkosten('Sö');
-            expect(grundkenntnis.kosten).toBe(2000);
+            expect(grundkenntnis.erstkosten).toBe(2000);
             grundkenntnis.adjustLernkosten('Kr');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
 
             grundkenntnis.adjustLernkosten('As');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('Ba');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('BN');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('BS');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('BW');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('Gl');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('Hä');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('Or');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('Se');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('Sp');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
             grundkenntnis.adjustLernkosten('Wa');
-            expect(grundkenntnis.kosten).toBe(1000);
+            expect(grundkenntnis.erstkosten).toBe(1000);
 
-            grundkenntnis.kosten = 1;
+            grundkenntnis.erstkosten = 1;
             grundkenntnis.adjustLernkosten('Be');
-            expect(grundkenntnis.kosten).toBe(2);
+            expect(grundkenntnis.erstkosten).toBe(2);
             grundkenntnis.adjustLernkosten('Dr');
-            expect(grundkenntnis.kosten).toBe(4);
+            expect(grundkenntnis.erstkosten).toBe(4);
             grundkenntnis.adjustLernkosten('Hl');
-            expect(grundkenntnis.kosten).toBe(8);
+            expect(grundkenntnis.erstkosten).toBe(8);
             grundkenntnis.adjustLernkosten('Hx');
-            expect(grundkenntnis.kosten).toBe(16);
+            expect(grundkenntnis.erstkosten).toBe(16);
             grundkenntnis.adjustLernkosten('Ma');
-            expect(grundkenntnis.kosten).toBe(32);
+            expect(grundkenntnis.erstkosten).toBe(32);
             grundkenntnis.adjustLernkosten('PH');
-            expect(grundkenntnis.kosten).toBe(64);
+            expect(grundkenntnis.erstkosten).toBe(64);
             grundkenntnis.adjustLernkosten('PF');
-            expect(grundkenntnis.kosten).toBe(128);
+            expect(grundkenntnis.erstkosten).toBe(128);
             grundkenntnis.adjustLernkosten('PK');
-            expect(grundkenntnis.kosten).toBe(256);
+            expect(grundkenntnis.erstkosten).toBe(256);
             grundkenntnis.adjustLernkosten('PM');
-            expect(grundkenntnis.kosten).toBe(512);
+            expect(grundkenntnis.erstkosten).toBe(512);
             grundkenntnis.adjustLernkosten('PT');
-            expect(grundkenntnis.kosten).toBe(1024);
+            expect(grundkenntnis.erstkosten).toBe(1024);
             grundkenntnis.adjustLernkosten('PW');
-            expect(grundkenntnis.kosten).toBe(2048);
+            expect(grundkenntnis.erstkosten).toBe(2048);
             grundkenntnis.adjustLernkosten('Sc');
-            expect(grundkenntnis.kosten).toBe(4096);
+            expect(grundkenntnis.erstkosten).toBe(4096);
             grundkenntnis.adjustLernkosten('Th');
-            expect(grundkenntnis.kosten).toBe(8192);
+            expect(grundkenntnis.erstkosten).toBe(8192);
+        });
+    });
+
+    describe('berechneGeplanteKosten', function () {
+        it('should sum erstkosten and no waffe', function () {
+            let kosten:number;
+            let json = {
+                "name": "Einhandschwerter",
+                "erstkosten": 500,
+                "waffen": []
+            };
+
+            let grundkenntnis: Waffengrundkenntnis;
+
+            grundkenntnis = Waffengrundkenntnis.deserialize(<Waffengrundkenntnis>json, 'Sö', 'angriff');
+
+            kosten = grundkenntnis.berechneGeplanteKosten();
+
+            expect(kosten).toBe(250);
+        });
+        it('should sum erstkosten and two waffe', function () {
+            let kosten:number;
+            let json = {
+                "name": "Einhandschwerter",
+                "erstkosten": 500,
+                "waffen": [
+                    {
+                        "name": "Langschwert",
+                        "staerke": 31,
+                        "geschicklichkeit": 21,
+                        "schwierigkeit": 5
+                    },
+                    {
+                        "name": "Krummsäbel",
+                        "staerke": 31,
+                        "geschicklichkeit": 11,
+                        "schwierigkeit": 4
+                    }
+                ]
+            };
+
+            let grundkenntnis: Waffengrundkenntnis;
+
+            grundkenntnis = Waffengrundkenntnis.deserialize(<Waffengrundkenntnis>json, 'Sö', 'angriff');
+
+            let langschwert = grundkenntnis.waffen[0];
+            let kurzschwert = grundkenntnis.waffen[1];
+
+            langschwert.lerneBis(langschwert.verbesserungen[3]);
+            kurzschwert.lerneBis(kurzschwert.verbesserungen[1]);
+
+            kosten = grundkenntnis.berechneGeplanteKosten();
+
+            expect(kosten).toBe(344);
+        });
+        it('should sum erstkosten and one waffe with nothing in geplanteKosten', function () {
+            let grundkenntnis : Waffengrundkenntnis;
+            let waffe : Waffe;
+            let kosten :number;
+
+            grundkenntnis = new Waffengrundkenntnis();
+            grundkenntnis.name = 'Einhandschwerter';
+            grundkenntnis.waffen = [];
+            waffe = new Waffe();
+            waffe.name = 'Langschwert';
+            waffe.schwierigkeit = 5;
+            waffe.geplanteStufen = [];
+            waffe.offeneStufen=[];
+            waffe.verbesserungen=[];
+            grundkenntnis.waffen.push(waffe);
+
+            kosten = grundkenntnis.berechneGeplanteKosten();
+
+            expect(kosten).toBe(500);
         });
     });
 });
