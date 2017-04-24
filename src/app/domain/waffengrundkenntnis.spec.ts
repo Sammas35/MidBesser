@@ -106,7 +106,7 @@ fdescribe('Waffengrundkenntnis', () => {
 
     describe('berechneGeplanteKosten', function () {
         it('should sum erstkosten and no waffe', function () {
-            let kosten:number;
+            let kosten: number;
             let json = {
                 "name": "Einhandschwerter",
                 "erstkosten": 500,
@@ -122,7 +122,7 @@ fdescribe('Waffengrundkenntnis', () => {
             expect(kosten).toBe(250);
         });
         it('should sum erstkosten and two waffe', function () {
-            let kosten:number;
+            let kosten: number;
             let json = {
                 "name": "Einhandschwerter",
                 "erstkosten": 500,
@@ -157,24 +157,27 @@ fdescribe('Waffengrundkenntnis', () => {
             expect(kosten).toBe(344);
         });
         it('should sum erstkosten and one waffe with nothing in geplanteKosten', function () {
-            let grundkenntnis : Waffengrundkenntnis;
-            let waffe : Waffe;
-            let kosten :number;
+            let grundkenntnis: Waffengrundkenntnis;
+            let waffe: Waffe;
+            let kosten: number;
 
             grundkenntnis = new Waffengrundkenntnis();
             grundkenntnis.name = 'Einhandschwerter';
+            grundkenntnis.erstkosten = 500;
             grundkenntnis.waffen = [];
             waffe = new Waffe();
             waffe.name = 'Langschwert';
             waffe.schwierigkeit = 5;
             waffe.geplanteStufen = [];
-            waffe.offeneStufen=[];
-            waffe.verbesserungen=[];
+            waffe.offeneStufen = [];
+            waffe.verbesserungen = [];
             grundkenntnis.waffen.push(waffe);
+
+            grundkenntnis.adjustLernkosten("Sö");
 
             kosten = grundkenntnis.berechneGeplanteKosten();
 
-            expect(kosten).toBe(500);
+            expect(kosten).toBe(250);
         });
     });
 });

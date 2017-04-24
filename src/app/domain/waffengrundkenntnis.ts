@@ -99,7 +99,7 @@ export class Waffengrundkenntnis extends LernEntity {
     berechneGeplanteKosten(): number {
         let kosten : number = 0;
 
-        if(!this.erfolgswert){
+        if(!this.erfolgswert && this.erstkosten){
             kosten += this.erstkosten;
         }
 
@@ -108,5 +108,20 @@ export class Waffengrundkenntnis extends LernEntity {
         }, kosten);
 
         return kosten;
+    }
+
+    copy() {
+        let result : Waffengrundkenntnis;
+
+        result = new Waffengrundkenntnis();
+
+        result.erfolgswert = this.erfolgswert;
+        result.startwert = this.startwert;
+        result.erstkosten = this.erstkosten;
+        result.faktor = this.faktor;
+
+        result.waffen = this.waffen.slice();
+
+        return result;
     }
 }

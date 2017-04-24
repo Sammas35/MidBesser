@@ -1,11 +1,25 @@
 <h2>{{title}}</h2>
 
-
-<nav>
-    <a routerLink="/charlist" routerLinkActive="active">Auswahl</a>
-    <a routerLink="/faehigkeiten" routerLinkActive="active" [class.disabled]="domainService.currentCharakter ? null : true">Fähigkeiten</a>
-    <a routerLink="/waffen" routerLinkActive="active" [class.disabled]="domainService.currentCharakter ? null : true">Waffen</a>
-    <a routerLink="/zauber" routerLinkActive="active" [class.disabled]="domainService.currentCharakter ? null : true">Zauber</a>
-</nav>
-
+<div class="w3-row">
+    <div class="w3-col m6 l6">
+        <nav>
+            <a routerLink="/charlist"
+               routerLinkActive="active">Auswahl</a>
+            <a routerLink="/faehigkeiten"
+               routerLinkActive="active"
+               [class.disabled]="domainService.currentCharakter ? null : true">Fähigkeiten</a>
+            <a routerLink="/waffen"
+               routerLinkActive="active"
+               [class.disabled]="domainService.currentCharakter ? null : true">Waffen</a>
+            <a routerLink="/zauber"
+               routerLinkActive="active"
+               *ngIf="domainService.currentCharakter && domainService.currentCharakter.hatSprueche()"
+               [class.disabled]="domainService.currentCharakter ? null : true">Zauber</a>
+        </nav>
+    </div>
+    <div class="w3-col m6 l6">
+        <span *ngIf="domainService.currentCharakter">
+        {{domainService.currentCharakter.berechneGeplanteKosten()}}</span>
+    </div>
+</div>
 <router-outlet></router-outlet>

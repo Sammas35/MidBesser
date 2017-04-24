@@ -1,4 +1,3 @@
-import {Verbesserung} from "./verbesserung";
 import {LernEntity} from "./lern-entity";
 
 export class Faehigkeit extends LernEntity {
