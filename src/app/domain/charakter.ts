@@ -2,19 +2,34 @@ import {AbenteuerTyp, ABENTEUERTYPEN_LIST} from "./abenteuer-typ";
 import {Faehigkeit} from "./faehigkeit";
 import {Waffengrundkenntnis} from "./waffengrundkenntnis";
 import {NamedEntity} from "./named-entity";
+import {Waffe} from "./waffe";
+import {LernEntity} from "./lern-entity";
 
-export class Charakter extends NamedEntity{
+export class Charakter extends NamedEntity {
     abenteuertyp: AbenteuerTyp;
     faehigkeitenGelerntList: Faehigkeit[];
     faehigkeitenList: Faehigkeit[];
     faehigkeitenWunschList: Faehigkeit[];
-    waffenGelerntList:Waffengrundkenntnis[];
+    waffenGelerntList: Waffengrundkenntnis[];
     waffenList: Waffengrundkenntnis[] = [];
-    waffenWunschList: Waffengrundkenntnis[];
+    waffenWunschList: Waffengrundkenntnis[] = [];
 
     assignWaffe(waffengrundkenntnis: Waffengrundkenntnis) {
+        let gelerntGrundkenntnis: Waffengrundkenntnis;
+        let wunsch: Waffengrundkenntnis;
 
+        this.waffenGelerntList = this.waffenGelerntList || [];
         this.waffenList.push(waffengrundkenntnis);
+
+        gelerntGrundkenntnis = <Waffengrundkenntnis>this.isGelernt(waffengrundkenntnis, this.waffenGelerntList);
+
+        if (gelerntGrundkenntnis) {
+            wunsch = this.waffenWunschList.find((w) => w.equals(waffengrundkenntnis));
+            if (!wunsch) {
+            }
+        } else {
+            this.addToList(waffengrundkenntnis, this.waffenList);
+        }
     }
 
     public assignFaehigkeit(faehigkeit: Faehigkeit) {
@@ -24,34 +39,37 @@ export class Charakter extends NamedEntity{
         this.faehigkeitenWunschList = this.faehigkeitenWunschList || [];
         this.faehigkeitenList = this.faehigkeitenList || [];
 
-        if (gelernt = this.isGelernt(faehigkeit)) {
+        if (gelernt = <Faehigkeit>this.isGelernt(faehigkeit, this.faehigkeitenGelerntList)) {
             this.addToWunschlist(faehigkeit, gelernt);
         } else {
-            this.addToFaehigkeitList(faehigkeit);
+            this.addToList(faehigkeit, this.faehigkeitenList);
         }
     }
 
-    private addToFaehigkeitList(faehigkeit: Faehigkeit) {
-        if(!this.isInList(faehigkeit, this.faehigkeitenList)) {
+    private addToList(faehigkeit: LernEntity, lernEntityList: LernEntity[]) {
+        if (!this.isInList(faehigkeit, lernEntityList)) {
             faehigkeit.adjustLernkosten(this.abenteuertyp.kuerzel);
-            this.getFaehigkeitenList().push(faehigkeit);
+            lernEntityList.push(faehigkeit);
         }
     }
 
-    private isInList(faehigkeit: Faehigkeit, faehigkeitenList: Faehigkeit[]) {
-        return faehigkeitenList.some((f) => f.name === faehigkeit.name);
+    private isInList(lernEntity: LernEntity, lernEntityList: LernEntity[]) {
+        return lernEntityList.some((f) => f.name === lernEntity.name);
     }
 
     private addToWunschlist(faehigkeit: Faehigkeit, gelernt: Faehigkeit) {
+        if (this.isInList(faehigkeit, this.faehigkeitenWunschList)) {
+            return;
+        }
         faehigkeit.erfolgswert = gelernt.erfolgswert;
         faehigkeit.adjustLernkosten(this.abenteuertyp.kuerzel);
         this.faehigkeitenWunschList.push(faehigkeit);
     }
 
-    private isGelernt(faehigkeit: Faehigkeit) {
-        let gelernt: Faehigkeit;
+    private isGelernt(lernEntity: LernEntity, lernEntityList: LernEntity[]) {
+        let gelernt: LernEntity;
 
-        gelernt = this.faehigkeitenGelerntList.find((f)=>faehigkeit.equals(f));
+        gelernt = lernEntityList.find((f) => lernEntity.equals(f));
 
         return gelernt;
     }
@@ -75,5 +93,23 @@ export class Charakter extends NamedEntity{
         result.faehigkeitenWunschList = [];
 
         return result;
+    }
+
+    public berechneGeplanteKosten(): number {
+        let result: number;
+
+        result = this.faehigkeitenWunschList.reduce((prev, curr) => {
+            return prev + curr.berechneGeplanteKosten();
+        }, 0);
+
+        result = this.waffenWunschList.reduce((prev, curr) => {
+            return prev + curr.berechneGeplanteKosten();
+        }, result);
+
+        return result;
+    }
+
+    public hatSprueche(): boolean {
+        return false;
     }
 }

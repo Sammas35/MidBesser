@@ -1,4 +1,4 @@
 export class Verbesserung {
-    erfolgswert:string;
-    kosten:number;
+    constructor(public erfolgswert: string, public kosten: number) {
+    }
 }

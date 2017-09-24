@@ -1,5 +1,5 @@
 import {LernEntity} from "../domain/lern-entity";
-export class LernComponent {
+export class LernBaseComponent {
 
     constructor(protected allList: LernEntity[], protected wunschList: LernEntity[]) {
     }
@@ -24,5 +24,15 @@ export class LernComponent {
             return;
         }
         this.move(namedEntity, this.wunschList, this.allList);
+    }
+
+    berechneGeplanteKosten():number{
+        let kosten : number;
+
+        kosten = this.wunschList.reduce((prev, curr)=> {
+            return prev + curr.berechneGeplanteKosten();
+        }, 0);
+
+        return kosten;
     }
 }

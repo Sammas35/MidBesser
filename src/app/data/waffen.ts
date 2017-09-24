@@ -3,7 +3,7 @@ export const WAFFEN = {
         "angriff": [
             {
                 "name": "Einhandschwerter",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Langschwert",
@@ -21,7 +21,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Stichwaffen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Dolch",
@@ -45,7 +45,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Einhandschlagwaffen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Keule",
@@ -81,7 +81,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Spießwaffen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "leichter Speer",
@@ -105,7 +105,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Zweihandschwerter",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Bihänder",
@@ -123,7 +123,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Zweihandschlagwaffen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Schlachtbeil",
@@ -141,7 +141,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Stangenwaffen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Hellebarde",
@@ -159,7 +159,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Kettenwaffen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Morgenstern",
@@ -177,7 +177,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Kampfstab",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Kampfstab",
@@ -189,7 +189,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Magierstab",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Magierstab",
@@ -201,7 +201,7 @@ export const WAFFEN = {
             },
             {
                 "name": "waffenloser Kampf",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "waffenloser Kampf",
@@ -213,7 +213,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Bogen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Bogen",
@@ -231,7 +231,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Armbrüste",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "leichte Armbrust",
@@ -249,7 +249,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Schleudern",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Schleuder",
@@ -267,7 +267,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Wurfspieße",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Wurfspeer",
@@ -291,7 +291,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Wurfschlagwaffen",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Wurfaxt",
@@ -315,7 +315,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Wurfmesser",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Wurfmesser",
@@ -327,7 +327,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Wurfpfeil",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Wurfpfeil",
@@ -339,7 +339,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Wurfstern",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Wurfstern",
@@ -351,7 +351,7 @@ export const WAFFEN = {
             },
             {
                 "name": "Blasrohr",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Blasrohr",
@@ -363,7 +363,7 @@ export const WAFFEN = {
             }],
         "verteidigung": [{
             "name": "Schilde",
-            "kosten": 500,
+            "erstkosten": 500,
             "waffen": [
                 {
                     "name": "großer Schild",
@@ -387,7 +387,7 @@ export const WAFFEN = {
         },
             {
                 "name": "Parierdolch",
-                "kosten": 500,
+                "erstkosten": 500,
                 "waffen": [
                     {
                         "name": "Parierdolch",
