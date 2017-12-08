@@ -1,25 +1,43 @@
 <h2>{{title}}</h2>
 
-<div class="w3-row">
-    <div class="w3-col m6 l6">
-        <nav>
-            <a routerLink="/charlist"
-               routerLinkActive="active">Auswahl</a>
-            <a routerLink="/faehigkeiten"
-               routerLinkActive="active"
-               [class.disabled]="domainService.currentCharakter ? null : true">Fähigkeiten</a>
-            <a routerLink="/waffen"
-               routerLinkActive="active"
-               [class.disabled]="domainService.currentCharakter ? null : true">Waffen</a>
-            <a routerLink="/zauber"
-               routerLinkActive="active"
-               *ngIf="domainService.currentCharakter && domainService.currentCharakter.hatSprueche()"
-               [class.disabled]="domainService.currentCharakter ? null : true">Zauber</a>
-        </nav>
-    </div>
-    <div class="w3-col m6 l6">
+<div *ngIf="!domainService.currentCharakter">
+    Um einen Charakter zu planen kann man entweder<br>
+    <ul>
+        <li>einen neuen Charakter über das Menü <i>Charakter/Neu</i> oder mit <i>Strg+n</i> anlegen</li>
+    </ul>
+    oder <br>
+    <ul>
+        <li>einen existierenden Charakter über das Menü <i>Charakter/Öffnen</i> oder mit <i>Strg+o</i> öffnen</li>
+    </ul>
+</div>
+
+<div *ngIf="domainService.currentCharakter">
+
+
+    <div class="w3-row">
+        <div class="w3-col m6 l6">
+            <nav>
+                <a routerLink="/startpage"
+                   routerLinkActive="active">Startseite</a>
+                <a routerLink="/charlist"
+                   routerLinkActive="active">Auswahl</a>
+                <a routerLink="/faehigkeiten"
+                   routerLinkActive="active"
+                   [class.disabled]="domainService.currentCharakter ? null : true">Fähigkeiten</a>
+                <a routerLink="/waffen"
+                   routerLinkActive="active"
+                   [class.disabled]="domainService.currentCharakter ? null : true">Waffen</a>
+                <a routerLink="/zauber"
+                   routerLinkActive="active"
+                   *ngIf="domainService.currentCharakter && domainService.currentCharakter.hatSprueche()"
+                   [class.disabled]="domainService.currentCharakter ? null : true">Zauber</a>
+            </nav>
+        </div>
+        <div class="w3-col m6 l6">
         <span *ngIf="domainService.currentCharakter">
         {{domainService.currentCharakter.berechneGeplanteKosten()}}</span>
+            <span><a (click)="saveCurrent(domainService.currentCharakter)">Speichern</a></span>
+        </div>
     </div>
+    <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

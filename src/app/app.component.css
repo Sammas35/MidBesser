@@ -3,3 +3,6 @@ a.disabled {
     cursor: default;
     color: lightgray;
 }
+h2{
+    font-size:16px;
+}
