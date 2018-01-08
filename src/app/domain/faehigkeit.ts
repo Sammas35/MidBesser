@@ -4,6 +4,14 @@ export class Faehigkeit extends LernEntity {
     grund: string[];
     ausnahme: string[];
 
+    public static deserializeList(faehigkeitList: Faehigkeit[]): Faehigkeit[] {
+        if(!faehigkeitList) {
+            return [];
+        }
+
+        return faehigkeitList.map((c:Faehigkeit)=>Faehigkeit.deserialize(c))
+    }
+
     public static deserialize(faehigkeit: Faehigkeit): Faehigkeit {
         let result: Faehigkeit;
 
@@ -20,6 +28,8 @@ export class Faehigkeit extends LernEntity {
 
         return result;
     }
+
+
 
     adjustLernkosten(kuerzel: string) {
         let index;

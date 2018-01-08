@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
 import {DomainService} from "./domainservice/domain.service";
 import {Charakter} from "./domain/charakter";
 import {DomainIoService} from "./domain-io/domain-io.service";
@@ -15,7 +15,12 @@ export class AppComponent implements OnInit {
     title = 'Midgard verbessern';
 
 
-    constructor(private router: Router, public domainService: DomainService, public domainIoService: DomainIoService, private electronService: ElectronService) {
+    constructor(private router: Router,
+                public domainService: DomainService,
+                public domainIoService: DomainIoService,
+                private electronService: ElectronService,
+                private ngZone : NgZone) {
+
         let ipcRenderer = electronService.ipcRenderer;
         ipcRenderer.on('newChar', this.newChar.bind(this));
         ipcRenderer.on('saveChar', this.saveChar.bind(this));
@@ -41,6 +46,7 @@ export class AppComponent implements OnInit {
             .subscribe(value => {
                 this.domainService.currentCharakter = value;
                 console.log('Load Char', value, this.domainService.currentCharakter);
+                this.ngZone.run(()=>{}, );
             });
     }
 

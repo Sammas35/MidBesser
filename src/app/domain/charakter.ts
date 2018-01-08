@@ -81,6 +81,7 @@ export class Charakter extends NamedEntity {
         return this.faehigkeitenList;
     }
 
+
     public static deserialize(charakter: Charakter): Charakter {
         let result: Charakter;
 
@@ -88,9 +89,14 @@ export class Charakter extends NamedEntity {
 
         result.name = charakter.name;
         result.abenteuertyp = ABENTEUERTYPEN_LIST.find((abenteuertyp) => abenteuertyp.kuerzel === charakter.abenteuertyp.kuerzel);
-        result.faehigkeitenGelerntList = charakter.faehigkeitenGelerntList ? charakter.faehigkeitenGelerntList.slice() : [];
-        result.faehigkeitenList = [];
-        result.faehigkeitenWunschList = [];
+
+        result.faehigkeitenGelerntList = Faehigkeit.deserializeList(charakter.faehigkeitenGelerntList);
+        result.faehigkeitenList = Faehigkeit.deserializeList(charakter.faehigkeitenList);
+        result.faehigkeitenWunschList = Faehigkeit.deserializeList(charakter.faehigkeitenWunschList);
+
+        // result.waffenGelerntList = charakter.waffenGelerntList ? charakter.waffenGelerntList.slice() : [];
+        // result.waffenList = charakter.waffenList ? charakter.waffenList.slice() : [];
+        // result.waffenWunschList = charakter.waffenWunschList ? charakter.waffenWunschList.slice() : [];
 
         return result;
     }

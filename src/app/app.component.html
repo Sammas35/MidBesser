@@ -17,10 +17,6 @@
     <div class="w3-row">
         <div class="w3-col m6 l6">
             <nav>
-                <a routerLink="/startpage"
-                   routerLinkActive="active">Startseite</a>
-                <a routerLink="/charlist"
-                   routerLinkActive="active">Auswahl</a>
                 <a routerLink="/faehigkeiten"
                    routerLinkActive="active"
                    [class.disabled]="domainService.currentCharakter ? null : true">Fähigkeiten</a>
