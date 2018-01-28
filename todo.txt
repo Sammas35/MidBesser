@@ -1,1 +1,19 @@
+- GFP und zu zahlende AEP trennen
+- geplantes permanent lernen
+
 - skill rechts wieder abwählen
+- Fähigkeiten per Lernchance
+
+- Waffen nur einmal auf der linken Seite laden
+- Waffen per Lernchance verbessern
+
+- Zauber den Abenteuertypen zuordnen
+- Zauber lernen
+- Zauber per Schriftrolle lernen
+- Zauber mit Kennzeichnung für "nicht mit Schriftrolle lernbar" versehen
+
+- AP verbessern
+- Zaubererfolgswert verbessern
+- Resi verbessern
+- Abwehr verbessern
+- Prozenter bei Gradaufstieg auswerten -> Grundwerte steigern
