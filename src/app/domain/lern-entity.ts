@@ -10,11 +10,13 @@ export class LernEntity extends NamedEntity {
     geplanteStufen: Verbesserung[];
     offeneStufen: Verbesserung[];
     verbesserungen: Verbesserung[];
+    gelernt: boolean;
+    lernen: boolean;
 
     berechneGeplanteKosten(): number {
         let kosten: number = 0;
 
-        if (!this.erfolgswert && this.erstkosten) {
+        if (!this.gelernt && this.lernen && this.erstkosten) {
             kosten += this.erstkosten;
         }
 
@@ -27,8 +29,16 @@ export class LernEntity extends NamedEntity {
     }
 
     isGelernt(): boolean {
-        return this.erfolgswert !== null && this.erfolgswert != undefined;
+        return this.gelernt;
+        // return this.erfolgswert !== null && this.erfolgswert != undefined;
     }
+
+    entferneAlle(){
+        let stufen: Array<Verbesserung>;
+        stufen = this.geplanteStufen.splice(0);
+        this.offeneStufen = stufen.concat(this.offeneStufen);
+    }
+
 
     entferneBis(verbesserung: Verbesserung) {
         let stufePos: number;

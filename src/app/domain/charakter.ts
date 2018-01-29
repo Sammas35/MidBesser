@@ -1,9 +1,9 @@
-import {AbenteuerTyp, ABENTEUERTYPEN_LIST} from "./abenteuer-typ";
-import {Faehigkeit} from "./faehigkeit";
-import {Waffengrundkenntnis} from "./waffengrundkenntnis";
-import {NamedEntity} from "./named-entity";
-import {Waffe} from "./waffe";
-import {LernEntity} from "./lern-entity";
+import {AbenteuerTyp, ABENTEUERTYPEN_LIST} from './abenteuer-typ';
+import {Faehigkeit} from './faehigkeit';
+import {Waffengrundkenntnis} from './waffengrundkenntnis';
+import {NamedEntity} from './named-entity';
+import {LernEntity} from './lern-entity';
+import {Lernkontext} from './lernkontext';
 
 export class Charakter extends NamedEntity {
     abenteuertyp: AbenteuerTyp;
@@ -13,6 +13,23 @@ export class Charakter extends NamedEntity {
     waffenGelerntList: Waffengrundkenntnis[];
     waffenList: Waffengrundkenntnis[] = [];
     waffenWunschList: Waffengrundkenntnis[] = [];
+
+    faehigkeiten: Lernkontext;
+
+    public static deserialize(charakter: Charakter): Charakter {
+        let result: Charakter;
+
+        result = new Charakter();
+
+        result.name = charakter.name;
+        result.abenteuertyp = ABENTEUERTYPEN_LIST.find((abenteuertyp) => abenteuertyp.kuerzel === charakter.abenteuertyp.kuerzel);
+
+        result.faehigkeitenGelerntList = Faehigkeit.deserializeList(charakter.faehigkeitenGelerntList);
+        result.faehigkeitenList = Faehigkeit.deserializeList(charakter.faehigkeitenList);
+        result.faehigkeitenWunschList = Faehigkeit.deserializeList(charakter.faehigkeitenWunschList);
+
+        return result;
+    }
 
     assignWaffe(waffengrundkenntnis: Waffengrundkenntnis) {
         let gelerntGrundkenntnis: Waffengrundkenntnis;
@@ -39,11 +56,29 @@ export class Charakter extends NamedEntity {
         this.faehigkeitenWunschList = this.faehigkeitenWunschList || [];
         this.faehigkeitenList = this.faehigkeitenList || [];
 
-        if (gelernt = <Faehigkeit>this.isGelernt(faehigkeit, this.faehigkeitenGelerntList)) {
+        if (gelernt = <Faehigkeit>this.findInList(faehigkeit, this.faehigkeitenWunschList)) {
             this.addToWunschlist(faehigkeit, gelernt);
         } else {
             this.addToList(faehigkeit, this.faehigkeitenList);
         }
+    }
+
+    public berechneGeplanteKosten(): number {
+        let result: number;
+
+        result = this.faehigkeitenWunschList.reduce((prev, curr) => {
+            return prev + curr.berechneGeplanteKosten();
+        }, 0);
+
+        result = this.waffenWunschList.reduce((prev, curr) => {
+            return prev + curr.berechneGeplanteKosten();
+        }, result);
+
+        return result;
+    }
+
+    public hatSprueche(): boolean {
+        return false;
     }
 
     private addToList(faehigkeit: LernEntity, lernEntityList: LernEntity[]) {
@@ -81,41 +116,7 @@ export class Charakter extends NamedEntity {
         return this.faehigkeitenList;
     }
 
-
-    public static deserialize(charakter: Charakter): Charakter {
-        let result: Charakter;
-
-        result = new Charakter();
-
-        result.name = charakter.name;
-        result.abenteuertyp = ABENTEUERTYPEN_LIST.find((abenteuertyp) => abenteuertyp.kuerzel === charakter.abenteuertyp.kuerzel);
-
-        result.faehigkeitenGelerntList = Faehigkeit.deserializeList(charakter.faehigkeitenGelerntList);
-        result.faehigkeitenList = Faehigkeit.deserializeList(charakter.faehigkeitenList);
-        result.faehigkeitenWunschList = Faehigkeit.deserializeList(charakter.faehigkeitenWunschList);
-
-        // result.waffenGelerntList = charakter.waffenGelerntList ? charakter.waffenGelerntList.slice() : [];
-        // result.waffenList = charakter.waffenList ? charakter.waffenList.slice() : [];
-        // result.waffenWunschList = charakter.waffenWunschList ? charakter.waffenWunschList.slice() : [];
-
-        return result;
-    }
-
-    public berechneGeplanteKosten(): number {
-        let result: number;
-
-        result = this.faehigkeitenWunschList.reduce((prev, curr) => {
-            return prev + curr.berechneGeplanteKosten();
-        }, 0);
-
-        result = this.waffenWunschList.reduce((prev, curr) => {
-            return prev + curr.berechneGeplanteKosten();
-        }, result);
-
-        return result;
-    }
-
-    public hatSprueche(): boolean {
-        return false;
+    private findInList(lernEntity: LernEntity, lernEntityList: LernEntity[]) {
+        return lernEntityList.find((f) => f.name === lernEntity.name);
     }
 }

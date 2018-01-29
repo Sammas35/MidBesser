@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Charakter} from "../domain/charakter";
 import {CHARS} from "../mockdata/mock.chars";
 import {Observable} from "rxjs";
+import {Observer} from 'rxjs/Observer';
 
 @Injectable()
 export class CharService {
@@ -10,7 +11,7 @@ export class CharService {
     }
 
     getChars(): Observable<Charakter> {
-        return Observable.create((observer) => {
+        return Observable.create((observer:Observer<Charakter>) => {
             CHARS.forEach((char) => {
                 let charakter : Charakter;
 

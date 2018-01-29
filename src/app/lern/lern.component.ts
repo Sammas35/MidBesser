@@ -21,7 +21,17 @@ export class LernComponent implements OnInit {
     @Output() remove = new EventEmitter<LernEntity>();
 
     triggerRemoveEvent(lern:LernEntity) {
+        console.log('triggerRemoveEvent');
         this.remove.emit(lern);
+    }
+
+    toggle(lernEntity: LernEntity){
+        if(lernEntity.lernen){
+            lernEntity.lernen = false;
+            lernEntity.entferneAlle();
+        }else {
+            lernEntity.lernen = true;
+        }
     }
 
     entferne(lernEntity: LernEntity, verbesserung:Verbesserung){
@@ -29,6 +39,9 @@ export class LernComponent implements OnInit {
     }
 
     lerne(lernEntity: LernEntity, verbesserung:Verbesserung){
+        if(!lernEntity.lernen) {
+            lernEntity.lernen = true;
+        }
         lernEntity.lerneBis(verbesserung);
     }
 }

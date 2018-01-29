@@ -21,7 +21,6 @@ export class FaehigkeitenComponent extends LernBaseComponent implements OnInit {
 
     ngOnInit() {
         if(this.charakter) {
-            console.log(this.charakter);
             SKILLS.forEach((skill) => {
                 this.charakter.assignFaehigkeit(Faehigkeit.deserialize(<Faehigkeit>skill));
             });

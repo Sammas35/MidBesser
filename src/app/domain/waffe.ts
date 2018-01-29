@@ -92,5 +92,6 @@ export class Waffe extends LernEntity {
             }
             return 7;
         }
+        return 0;
     }
 }

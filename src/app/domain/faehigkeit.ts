@@ -3,6 +3,8 @@ import {LernEntity} from "./lern-entity";
 export class Faehigkeit extends LernEntity {
     grund: string[];
     ausnahme: string[];
+    private grundFaktor: number = 0.5;
+    private ausnahmeFaktor: number = 2;
 
     public static deserializeList(faehigkeitList: Faehigkeit[]): Faehigkeit[] {
         if(!faehigkeitList) {
@@ -20,8 +22,11 @@ export class Faehigkeit extends LernEntity {
         result.name = faehigkeit.name;
         result.erstkosten = faehigkeit.erstkosten;
         result.startwert = faehigkeit.startwert;
+        result.gelernt = faehigkeit.gelernt;
+        result.erfolgswert = faehigkeit.erfolgswert;
         result.grund = faehigkeit.grund ? faehigkeit.grund.slice() : [];
         result.ausnahme = faehigkeit.ausnahme ? faehigkeit.ausnahme.slice() : [];
+        result.faktor = faehigkeit.faktor;
         result.verbesserungen = faehigkeit.verbesserungen ? faehigkeit.verbesserungen.slice() : [];
         result.offeneStufen = [].concat(result.verbesserungen);
         result.geplanteStufen = [];
@@ -29,16 +34,14 @@ export class Faehigkeit extends LernEntity {
         return result;
     }
 
-
-
     adjustLernkosten(kuerzel: string) {
         let index;
         this.faktor = 1;
 
-        if (this.grund && this.grund.includes(kuerzel)) {
-            this.faktor = 0.5;
-        } else if (this.ausnahme && this.ausnahme.includes(kuerzel)) {
-            this.faktor = 2;
+        if (this.grund && this.grund.some(k => k === kuerzel)) {
+            this.faktor = this.grundFaktor;
+        } else if (this.ausnahme && this.ausnahme.some(k => k === kuerzel)) {
+            this.faktor = this.ausnahmeFaktor;
         }
 
         this.erstkosten *= this.faktor;

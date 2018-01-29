@@ -44,7 +44,7 @@ export class WaffenComponent extends LernBaseComponent implements OnInit {
         grundkenntnis.addWaffe(waffe);
     }
 
-    private getWunschkenntnis(waffengrundkenntnis):Waffengrundkenntnis {
+    private getWunschkenntnis(waffengrundkenntnis : Waffengrundkenntnis):Waffengrundkenntnis {
         let result : Waffengrundkenntnis;
 
         result = this.charakter.waffenWunschList.find((grundkenntnis)=>grundkenntnis.name === waffengrundkenntnis.name);

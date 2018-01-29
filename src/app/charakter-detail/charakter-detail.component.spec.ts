@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CharakterDetailComponent } from './charakter-detail.component';
 import {FormsModule} from "@angular/forms";
 import {TEST_CONFIG} from "../testconfig/testconfig";

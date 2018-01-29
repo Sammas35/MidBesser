@@ -63,7 +63,11 @@ export class DomainIoService {
 
                 let charakter : Charakter;
 
+                console.log('File Data: ', data);
+
                 charakter = Charakter.deserialize(JSON.parse(data));
+
+                console.log('Deserialized Character', charakter);
 
                 observer.next(charakter);
             });
