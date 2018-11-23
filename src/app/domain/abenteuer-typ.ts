@@ -1,35 +1,36 @@
 export class AbenteuerTyp {
     name: string;
     kuerzel: string;
+    zauber:boolean;
 }
 
 export const ABENTEUERTYPEN = {
-    'Assassine': {name: 'Assassine', kuerzel: 'As'},
-    'BarbarNordland': {name: 'Barbar Nordland', kuerzel: 'BN'},
-    'BarbarSteppe': {name: 'Barbar Steppe', kuerzel: 'BS'},
-    'BarbarWald': {name: 'Barbar Wald', kuerzel: 'BW'},
-    'Barde': {name: 'Barde', kuerzel: 'Ba'},
-    'Gluecksritter': {name: 'Glücksritter', kuerzel: 'Gl'},
-    'Haendler': {name: 'Händler', kuerzel: 'Hä'},
-    'Krieger': {name: 'Krieger', kuerzel: 'Kr'},
-    'Ordenskrieger': {name: 'Ordenskrieger', kuerzel: 'Or'},
-    'Seefahrer': {name: 'Seefahrer', kuerzel: 'Se'},
-    'Soeldner': {name: 'Söldner', kuerzel: 'Sö'},
-    'Spitzbube': {name: 'Spitzbube', kuerzel: 'Sp'},
-    'Waldlaeufer': {name: 'Waldläufer', kuerzel: 'Wa'},
-    'Beschwoerer': {name: 'Beschwörer', kuerzel: 'Be'},
-    'Druide': {name: 'Druide', kuerzel: 'Dr'},
-    'Heiler': {name: 'Heiler', kuerzel: 'Hl'},
-    'Hexer': {name: 'Hexer', kuerzel: 'Hx'},
-    'Magier': {name: 'Magier', kuerzel: 'Ma'},
-    'PriesterFruchtbarkeit': {name: 'Priester Fruchtbarkeit', kuerzel: 'PF'},
-    'PriesterHerrschaft': {name: 'Priester Herrschaft', kuerzel: 'PH'},
-    'PriesterKrieg': {name: 'Priester Krieg', kuerzel: 'PK'},
-    'PriesterMeer': {name: 'Priester Meer', kuerzel: 'PM'},
-    'PriesterWeisheit': {name: 'Priester Weisheit', kuerzel: 'PW'},
-    'PriesterTod': {name: 'Priester Tod', kuerzel: 'PT'},
-    'Schamane': {name: 'Schamane', kuerzel: 'Sc'},
-    'Thaumaturg': {name: 'Thaumaturg', kuerzel: 'Th'}
+    'Assassine': {name: 'Assassine', kuerzel: 'As', zauber:false},
+    'BarbarNordland': {name: 'Barbar Nordland', kuerzel: 'BN', zauber:false},
+    'BarbarSteppe': {name: 'Barbar Steppe', kuerzel: 'BS', zauber:false},
+    'BarbarWald': {name: 'Barbar Wald', kuerzel: 'BW', zauber:false},
+    'Barde': {name: 'Barde', kuerzel: 'Ba', zauber:false},
+    'Gluecksritter': {name: 'Glücksritter', kuerzel: 'Gl', zauber:false},
+    'Haendler': {name: 'Händler', kuerzel: 'Hä', zauber:false},
+    'Krieger': {name: 'Krieger', kuerzel: 'Kr', zauber:false},
+    'Ordenskrieger': {name: 'Ordenskrieger', kuerzel: 'Or', zauber:false},
+    'Seefahrer': {name: 'Seefahrer', kuerzel: 'Se', zauber:false},
+    'Soeldner': {name: 'Söldner', kuerzel: 'Sö', zauber:false},
+    'Spitzbube': {name: 'Spitzbube', kuerzel: 'Sp', zauber:false},
+    'Waldlaeufer': {name: 'Waldläufer', kuerzel: 'Wa', zauber:false},
+    'Beschwoerer': {name: 'Beschwörer', kuerzel: 'Be', zauber:true},
+    'Druide': {name: 'Druide', kuerzel: 'Dr', zauber:true},
+    'Heiler': {name: 'Heiler', kuerzel: 'Hl', zauber:true},
+    'Hexer': {name: 'Hexer', kuerzel: 'Hx', zauber:true},
+    'Magier': {name: 'Magier', kuerzel: 'Ma', zauber:true},
+    'PriesterFruchtbarkeit': {name: 'Priester Fruchtbarkeit', kuerzel: 'PF', zauber:true},
+    'PriesterHerrschaft': {name: 'Priester Herrschaft', kuerzel: 'PH', zauber:true},
+    'PriesterKrieg': {name: 'Priester Krieg', kuerzel: 'PK', zauber:true},
+    'PriesterMeer': {name: 'Priester Meer', kuerzel: 'PM', zauber:true},
+    'PriesterWeisheit': {name: 'Priester Weisheit', kuerzel: 'PW', zauber:true},
+    'PriesterTod': {name: 'Priester Tod', kuerzel: 'PT', zauber:true},
+    'Schamane': {name: 'Schamane', kuerzel: 'Sc', zauber:true},
+    'Thaumaturg': {name: 'Thaumaturg', kuerzel: 'Th', zauber:true}
 };
 
 export const ABENTEUERTYPEN_LIST = [

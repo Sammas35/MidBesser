@@ -28,8 +28,8 @@ export class Faehigkeit extends LernEntity {
         result.ausnahme = faehigkeit.ausnahme ? faehigkeit.ausnahme.slice() : [];
         result.faktor = faehigkeit.faktor;
         result.verbesserungen = faehigkeit.verbesserungen ? faehigkeit.verbesserungen.slice() : [];
-        result.offeneStufen = [].concat(result.verbesserungen);
-        result.geplanteStufen = [];
+        result.offeneStufen = faehigkeit.offeneStufen ? faehigkeit.offeneStufen.slice() : [];
+        result.geplanteStufen = faehigkeit.geplanteStufen ? faehigkeit.geplanteStufen.slice() : [];
 
         return result;
     }

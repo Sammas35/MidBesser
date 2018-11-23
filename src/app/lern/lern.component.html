@@ -5,26 +5,26 @@
     <div class="w3-col m1 l1" *ngIf="!lern.gelernt">{{lern.startwert}}<span *ngIf="!lern.startwert">&nbsp;</span>
     </div>
     <div class="w3-col m1 l1" *ngIf="!lern.gelernt">{{lern.erstkosten}}</div>
-    <div class="w3-col m1 l1" *ngIf="!lern.gelernt && lern.lernen">x</div>
+    <div class="w3-col m1 l1" *ngIf="!lern.gelernt && lern.lernen">&#10003;</div>
     <div class="w3-col m1 l1" *ngIf="!lern.gelernt && !lern.lernen">&nbsp;</div>
     <div class="w3-col m3 l3" *ngIf="lern.gelernt">&nbsp;</div>
     <div class="w3-col m4 l4">{{lern.berechneGeplanteKosten()}}</div>
 </div>
 <div class="faehigkeit w3-row clickable"
-     *ngFor="let verbesserung of lern.geplanteStufen"
-     (click)="entferne(lern, verbesserung)">
-    <div class="w3-col m5 l5">&nbsp;</div>
+     *ngFor="let verbesserung of lern.geplanteStufen; let i = index">
+    <div class="w3-col m5 l5" *ngIf="i!==0||!lern.gelernt">&nbsp;</div>
+    <div class="w3-col m5 l5" *ngIf="i===0&&lern.gelernt"><input type="checkbox" [(ngModel)]="verbesserung.lernchance">Lernchance</div>
     <div class="w3-col m1 l1">{{verbesserung.erfolgswert}}</div>
     <div class="w3-col m1 l1">{{verbesserung.kosten}}</div>
-    <div class="w3-col m1 l1">x</div>
+    <div class="w3-col m1 l1" (click)="entferne(lern, verbesserung)">&#10003;</div>
     <div class="w3-col m4 l4">&nbsp;</div>
 </div>
 <div class="faehigkeit w3-row clickable"
-     *ngFor="let verbesserung of lern.offeneStufen"
-     (click)="lerne(lern, verbesserung)">
+     *ngFor="let verbesserung of lern.offeneStufen">
     <div class="w3-col m5 l5">&nbsp;</div>
     <div class="w3-col m1 l1">{{verbesserung.erfolgswert}}</div>
     <div class="w3-col m1 l1">{{verbesserung.kosten}}</div>
-    <div class="w3-col m1 l1">-</div>
+    <div class="w3-col m1 l1"
+         (click)="lerne(lern, verbesserung)">-</div>
     <div class="w3-col m4 l4">&nbsp;</div>
 </div>

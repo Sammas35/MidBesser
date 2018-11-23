@@ -1,10 +1,13 @@
 - GFP und zu zahlende AEP trennen
 - geplantes permanent lernen
 
-- skill rechts wieder abwählen
+- beim Laden Charakter initialisieren
+- beim Laden Start Seite zeigen
+
++ skill rechts wieder abwählen
 - Fähigkeiten per Lernchance
 
-- Waffen nur einmal auf der linken Seite laden
++ Waffen nur einmal auf der linken Seite laden
 - Waffen per Lernchance verbessern
 
 - Zauber den Abenteuertypen zuordnen

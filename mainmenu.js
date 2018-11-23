@@ -1,46 +1,56 @@
 const {Menu} = require('electron')
 const electron = require('electron')
+const {dialog} = require('electron')
+const path = require('path')
 const app = electron.app
-
 function getFileToOpen() {
-    return "Hans.json";
+
+    return dialog.showOpenDialog({
+        title: 'Charakter laden',
+        defaultPath: './chars',
+        filters: [
+            {name: 'Characters', extensions: ['char']}
+        ]
+    })
 }
 
 const template = [
     {
-        label:'Charaktere',
-        submenu:[
+        label: 'Charaktere',
+        submenu: [
             {
-                label:'Neu',
+                label: 'Neu',
                 accelerator: 'CmdOrCtrl+N',
-                type:'normal',
+                type: 'normal',
                 click(item, focusedWindow) {
-                    if(focusedWindow) {
+                    if (focusedWindow) {
                         focusedWindow.webContents.send('newChar')
                     }
                 }
             },
             {
-                label:'Speichern',
+                label: 'Speichern',
                 accelerator: 'CmdOrCtrl+S',
-                type:'normal',
+                type: 'normal',
                 click(item, focusedWindow) {
-                    if(focusedWindow) {
+                    if (focusedWindow) {
                         focusedWindow.webContents.send('saveChar')
                     }
                 }
             },
             {
-                label:'Öffnen',
+                label: 'Öffnen',
                 accelerator: 'CmdOrCtrl+O',
-                type:'normal',
+                type: 'normal',
                 click(item, focusedWindow) {
-                    if(focusedWindow) {
-                        let fileToOpen;
+                    if (focusedWindow) {
+                        let fileNames = getFileToOpen()
+                        let filename;
 
-                        fileToOpen = getFileToOpen();
-
-                        focusedWindow.webContents.send('openChar', fileToOpen);
+                        if (fileNames) {
+                            filename = path.basename(fileNames[0])
+                            focusedWindow.webContents.send('openChar', filename);
+                        }
                     }
                 }
             }
@@ -102,7 +112,7 @@ const template = [
         ]
     },
     {
-        label:'Hilfe',
+        label: 'Hilfe',
         role: 'help',
         submenu: [
             {

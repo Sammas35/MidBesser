@@ -6,6 +6,7 @@ import {LernEntity} from './lern-entity';
 import {Lernkontext} from './lernkontext';
 
 export class Charakter extends NamedEntity {
+    grad: number;
     abenteuertyp: AbenteuerTyp;
     faehigkeitenGelerntList: Faehigkeit[];
     faehigkeitenList: Faehigkeit[];
@@ -22,6 +23,7 @@ export class Charakter extends NamedEntity {
         result = new Charakter();
 
         result.name = charakter.name;
+        result.grad = charakter.grad;
         result.abenteuertyp = ABENTEUERTYPEN_LIST.find((abenteuertyp) => abenteuertyp.kuerzel === charakter.abenteuertyp.kuerzel);
 
         result.faehigkeitenGelerntList = Faehigkeit.deserializeList(charakter.faehigkeitenGelerntList);
@@ -36,7 +38,10 @@ export class Charakter extends NamedEntity {
         let wunsch: Waffengrundkenntnis;
 
         this.waffenGelerntList = this.waffenGelerntList || [];
-        this.waffenList.push(waffengrundkenntnis);
+
+        if(!this.isInList(waffengrundkenntnis, this.waffenList)){
+            this.waffenList.push(waffengrundkenntnis);
+        }
 
         gelerntGrundkenntnis = <Waffengrundkenntnis>this.isGelernt(waffengrundkenntnis, this.waffenGelerntList);
 
@@ -78,7 +83,7 @@ export class Charakter extends NamedEntity {
     }
 
     public hatSprueche(): boolean {
-        return false;
+        return this.abenteuertyp.zauber;
     }
 
     private addToList(faehigkeit: LernEntity, lernEntityList: LernEntity[]) {

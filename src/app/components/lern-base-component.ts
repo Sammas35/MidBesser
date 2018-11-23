@@ -4,14 +4,14 @@ export class LernBaseComponent {
     constructor(protected allList: LernEntity[], protected wunschList: LernEntity[]) {
     }
 
-    protected move(faehigkeit: LernEntity, source:LernEntity[], target:LernEntity[]) {
+    protected move(lernEntity: LernEntity, source:LernEntity[], target:LernEntity[]) {
         let index;
 
-        index = source.indexOf(faehigkeit);
+        index = source.indexOf(lernEntity);
         if (index > -1) {
             source.splice(index, 1);
         }
-        target.push(faehigkeit);
+        target.push(lernEntity);
         target.sort((f1, f2) => f1.name.localeCompare(f2.name));
     }
 

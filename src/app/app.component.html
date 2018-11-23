@@ -15,6 +15,11 @@
 
 
     <div class="w3-row">
+        {{domainService.currentCharakter.name}}
+        {{domainService.currentCharakter.abenteuertyp.name}}
+        (Grad {{domainService.currentCharakter.grad}})
+    </div>
+    <div class="w3-row">
         <div class="w3-col m6 l6">
             <nav>
                 <a routerLink="/faehigkeiten"
@@ -32,7 +37,7 @@
         <div class="w3-col m6 l6">
         <span *ngIf="domainService.currentCharakter">
         {{domainService.currentCharakter.berechneGeplanteKosten()}}</span>
-            <span><a (click)="saveCurrent(domainService.currentCharakter)">Speichern</a></span>
+            <span><a class="clickable" (click)="saveCurrent(domainService.currentCharakter)">Speichern</a></span>
         </div>
     </div>
     <router-outlet></router-outlet>
