@@ -21,11 +21,6 @@ export class DomainIoService {
             }
             fs.writeFile(charPath + '\\' + character.name + '.char', JSON.stringify(character), 'UTF-8', (err:any) => {
                 if (err) throw err;
-                console.log('Charakter ' + character.name + ' gespeichert');
-            });
-            fs.writeFile(charPath + '\\' + character.name + '.json', JSON.stringify(character), 'UTF-8', (err:any) => {
-                if (err) throw err;
-                console.log('Charakter ' + character.name + ' gespeichert');
             });
         });
     }
@@ -67,11 +62,7 @@ export class DomainIoService {
 
                 let charakter : Charakter;
 
-                console.log('File Data: ', data);
-
                 charakter = Charakter.deserialize(JSON.parse(data));
-
-                console.log('Deserialized Character', charakter);
 
                 observer.next(charakter);
             });

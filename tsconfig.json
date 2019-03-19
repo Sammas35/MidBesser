@@ -17,6 +17,7 @@
     "noImplicitUseStrict": false,
     "noFallthroughCasesInSwitch": true,
     "suppressImplicitAnyIndexErrors": true,
+    "preserveWhitespaces": "off",
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules"

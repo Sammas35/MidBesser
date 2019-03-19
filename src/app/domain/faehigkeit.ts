@@ -23,6 +23,7 @@ export class Faehigkeit extends LernEntity {
         result.erstkosten = faehigkeit.erstkosten;
         result.startwert = faehigkeit.startwert;
         result.gelernt = faehigkeit.gelernt;
+        result.lernen = faehigkeit.lernen;
         result.erfolgswert = faehigkeit.erfolgswert;
         result.grund = faehigkeit.grund ? faehigkeit.grund.slice() : [];
         result.ausnahme = faehigkeit.ausnahme ? faehigkeit.ausnahme.slice() : [];
@@ -30,6 +31,12 @@ export class Faehigkeit extends LernEntity {
         result.verbesserungen = faehigkeit.verbesserungen ? faehigkeit.verbesserungen.slice() : [];
         result.offeneStufen = faehigkeit.offeneStufen ? faehigkeit.offeneStufen.slice() : [];
         result.geplanteStufen = faehigkeit.geplanteStufen ? faehigkeit.geplanteStufen.slice() : [];
+
+        if (result.verbesserungen.length > 0
+            && result.offeneStufen.length == 0
+            && result.geplanteStufen.length == 0) {
+            result.offeneStufen = result.verbesserungen.slice();
+        }
 
         return result;
     }

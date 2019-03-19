@@ -60,6 +60,8 @@ export class LernEntity extends NamedEntity {
         let stufePos: number;
         let stufen: Array<Verbesserung>;
 
+        this.lernen = true;
+
         stufePos = this.offeneStufen.findIndex((v) => {
             return v === verbesserung;
         });

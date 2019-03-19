@@ -828,28 +828,8 @@ export const SKILLS = [
         'ausnahme': [],
         'verbesserungen': [
             {
-                'erfolgswert': '5',
+                'erfolgswert': '16',
                 'kosten': 50
-            },
-            {
-                'erfolgswert': '6',
-                'kosten': 50
-            },
-            {
-                'erfolgswert': '7',
-                'kosten': 100
-            },
-            {
-                'erfolgswert': '8',
-                'kosten': 100
-            },
-            {
-                'erfolgswert': '9',
-                'kosten': 200
-            },
-            {
-                'erfolgswert': '10',
-                'kosten': 200
             }
         ]
     },

@@ -13,18 +13,16 @@ import {LernBaseComponent} from "../components/lern-base-component";
 })
 export class WaffenComponent extends LernBaseComponent implements OnInit {
 
-    charakter : Charakter;
-
     constructor(protected domainService: DomainService) {
         super(domainService.currentCharakter.waffenList, domainService.currentCharakter.waffenWunschList);
-
-        this.charakter = domainService.currentCharakter;
     }
 
     ngOnInit() {
         WAFFEN.waffengrundkenntnisse.angriff.forEach((w) => {
-            this.charakter.assignWaffe(Waffengrundkenntnis.deserialize(<Waffengrundkenntnis>w, this.charakter.abenteuertyp.kuerzel, 'angriff'));
+            this.domainService.currentCharakter.assignWaffe(Waffengrundkenntnis.deserialize(<Waffengrundkenntnis>w, this.domainService.currentCharakter.abenteuertyp.kuerzel, 'angriff'));
         });
+
+        console.log('WaffenComponent', this.domainService.currentCharakter);
     }
 
     addWaffe(waffe:Waffe, grundkenntnis:Waffengrundkenntnis){
@@ -47,7 +45,7 @@ export class WaffenComponent extends LernBaseComponent implements OnInit {
     private getWunschkenntnis(waffengrundkenntnis : Waffengrundkenntnis):Waffengrundkenntnis {
         let result : Waffengrundkenntnis;
 
-        result = this.charakter.waffenWunschList.find((grundkenntnis)=>grundkenntnis.name === waffengrundkenntnis.name);
+        result = this.domainService.currentCharakter.waffenWunschList.find((grundkenntnis)=>grundkenntnis.name === waffengrundkenntnis.name);
 
         if(!result) {
             result = new Waffengrundkenntnis();
@@ -55,7 +53,7 @@ export class WaffenComponent extends LernBaseComponent implements OnInit {
             result.erstkosten = waffengrundkenntnis.erstkosten;
             result.faktor = waffengrundkenntnis.faktor;
             result.waffen = [];
-            this.charakter.waffenWunschList.push(result);
+            this.domainService.currentCharakter.waffenWunschList.push(result);
         }
 
         return result;
@@ -64,7 +62,7 @@ export class WaffenComponent extends LernBaseComponent implements OnInit {
     private getGrundkenntnis(wunschGrundkenntnis: Waffengrundkenntnis) {
         let result : Waffengrundkenntnis;
 
-        result = this.charakter.waffenList.find((grundkenntnis)=>grundkenntnis.name === wunschGrundkenntnis.name);
+        result = this.domainService.currentCharakter.waffenList.find((grundkenntnis)=>grundkenntnis.name === wunschGrundkenntnis.name);
 
         return result;
     }

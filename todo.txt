@@ -1,7 +1,7 @@
 - GFP und zu zahlende AEP trennen
-- geplantes permanent lernen
++ geplantes permanent lernen
 
-- beim Laden Charakter initialisieren
++ beim Laden Charakter initialisieren
 - beim Laden Start Seite zeigen
 
 + skill rechts wieder abwählen

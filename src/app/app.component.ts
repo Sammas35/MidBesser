@@ -1,9 +1,9 @@
 import {Component, NgZone, OnInit} from '@angular/core';
-import {DomainService} from "./domainservice/domain.service";
-import {Charakter} from "./domain/charakter";
-import {DomainIoService} from "./domain-io/domain-io.service";
-import {ElectronService} from "ngx-electron";
-import {Router} from "@angular/router";
+import {DomainService} from './domainservice/domain.service';
+import {Charakter} from './domain/charakter';
+import {DomainIoService} from './domain-io/domain-io.service';
+import {ElectronService} from 'ngx-electron';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
                 public domainService: DomainService,
                 public domainIoService: DomainIoService,
                 private electronService: ElectronService,
-                private ngZone : NgZone) {
+                private ngZone: NgZone) {
 
         let ipcRenderer = electronService.ipcRenderer;
         ipcRenderer.on('newChar', this.newChar.bind(this));
@@ -33,20 +33,19 @@ export class AppComponent implements OnInit {
 
     newChar() {
         console.log('newChar');
+        this.domainService.currentCharakter = new Charakter();
+        this.ngZone.run(() => {
+            this.router.navigate(['/neu']).then(()=>{console.log('done')});
+        });
     }
 
     openChar(event: any, fileName: string) {
-        // this.router.navigateByUrl('/charakter').then((fulfilled) => {
-        //     console.log('Navigate done : ' + fulfilled)
-        // }, (reason: any) => {
-        //     console.log('Navigate rejected : ' + reason)
-        // });
-        console.log('openChar', fileName);
         this.domainService.loadCharakter(fileName)
             .subscribe(value => {
-                this.domainService.currentCharakter = value;
-                console.log('Load Char', value, this.domainService.currentCharakter);
-                this.ngZone.run(()=>{}, );
+                this.ngZone.run(() => {
+                    this.domainService.currentCharakter = value;
+                    // this.router.navigateByUrl('/').then(()=>{}).catch((err)=>{console.log('navigation error', err)});
+                },);
             });
     }
 
@@ -58,5 +57,9 @@ export class AppComponent implements OnInit {
 
     saveCurrent(charakter: Charakter) {
         this.domainIoService.saveCharacter(charakter);
+    }
+
+    lernPermanent(currentCharakter: Charakter) {
+        currentCharakter.lernPermanent();
     }
 }

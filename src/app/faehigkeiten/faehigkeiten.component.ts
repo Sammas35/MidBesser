@@ -12,17 +12,15 @@ import {LernBaseComponent} from "../components/lern-base-component";
 })
 export class FaehigkeitenComponent extends LernBaseComponent implements OnInit {
 
-    charakter : Charakter;
-
     constructor(protected domainService: DomainService) {
         super(domainService.currentCharakter.faehigkeitenList, domainService.currentCharakter.faehigkeitenWunschList);
-        this.charakter = domainService.currentCharakter;
     }
 
     ngOnInit() {
-        if(this.charakter) {
+        this.domainService.currentCharakter;
+        if(this.domainService.currentCharakter) {
             SKILLS.forEach((skill) => {
-                this.charakter.assignFaehigkeit(Faehigkeit.deserialize(<Faehigkeit>skill));
+                this.domainService.currentCharakter.assignFaehigkeit(Faehigkeit.deserialize(<Faehigkeit>skill));
             });
         }
     }

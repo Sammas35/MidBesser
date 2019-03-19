@@ -7,6 +7,169 @@
         {
           "erstkosten": null,
           "erfolgswert": null,
+          "name": "Langschwert",
+          "staerke": 31,
+          "geschicklichkeit": 21,
+          "schwierigkeit": 5,
+          "verbesserungen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 25,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 50,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 100,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 200,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 400,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 1250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 2500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 2500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 3750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 3750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 6250,
+              "lernchance": false
+            }
+          ],
+          "offeneStufen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 25,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 50,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 100,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 200,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 400,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 1250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 2500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 2500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 3750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 3750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 6250,
+              "lernchance": false
+            }
+          ],
+          "geplanteStufen": []
+        },
+        {
+          "erstkosten": null,
+          "erfolgswert": null,
           "name": "Krummsäbel",
           "staerke": 31,
           "geschicklichkeit": 11,
@@ -1156,332 +1319,6 @@
             }
           ],
           "geplanteStufen": []
-        },
-        {
-          "erstkosten": null,
-          "erfolgswert": null,
-          "name": "Handaxt",
-          "staerke": 11,
-          "geschicklichkeit": 1,
-          "schwierigkeit": 3,
-          "verbesserungen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 9,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 9,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 9,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 15,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 30,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 60,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 120,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 240,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 450,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 750,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 1500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 1500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 2250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 2250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 3750,
-              "lernchance": false
-            }
-          ],
-          "offeneStufen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 9,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 9,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 9,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 15,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 30,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 60,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 120,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 240,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 450,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 750,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 1500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 1500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 2250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 2250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 3750,
-              "lernchance": false
-            }
-          ],
-          "geplanteStufen": []
-        },
-        {
-          "erstkosten": null,
-          "erfolgswert": null,
-          "name": "Streitaxt",
-          "staerke": 61,
-          "geschicklichkeit": 11,
-          "schwierigkeit": 4,
-          "verbesserungen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 20,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 40,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 80,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 160,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 320,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 600,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 1000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 5000,
-              "lernchance": false
-            }
-          ],
-          "offeneStufen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 20,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 40,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 80,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 160,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 320,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 600,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 1000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 5000,
-              "lernchance": false
-            }
-          ],
-          "geplanteStufen": []
         }
       ]
     },
@@ -2316,169 +2153,6 @@
       "name": "Zweihandschlagwaffen",
       "erstkosten": 250,
       "waffen": [
-        {
-          "erstkosten": null,
-          "erfolgswert": null,
-          "name": "Schlachtbeil",
-          "staerke": 61,
-          "geschicklichkeit": 31,
-          "schwierigkeit": 4,
-          "verbesserungen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 20,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 40,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 80,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 160,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 320,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 600,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 1000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 5000,
-              "lernchance": false
-            }
-          ],
-          "offeneStufen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 12,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 20,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 40,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 80,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 160,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 320,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 600,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 1000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 2000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 3000,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 5000,
-              "lernchance": false
-            }
-          ],
-          "geplanteStufen": []
-        },
         {
           "erstkosten": null,
           "erfolgswert": null,
@@ -3649,171 +3323,7 @@
     {
       "name": "waffenloser Kampf",
       "erstkosten": 250,
-      "waffen": [
-        {
-          "erstkosten": null,
-          "erfolgswert": null,
-          "name": "waffenloser Kampf",
-          "staerke": 21,
-          "geschicklichkeit": 21,
-          "schwierigkeit": 7,
-          "verbesserungen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 21,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 21,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 21,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 35,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 70,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 140,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 280,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 560,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 1050,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 1750,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 3500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 3500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 5250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 5250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 8750,
-              "lernchance": false
-            }
-          ],
-          "offeneStufen": [
-            {
-              "erfolgswert": "5",
-              "kosten": 21,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "6",
-              "kosten": 21,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "7",
-              "kosten": 21,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "8",
-              "kosten": 35,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "9",
-              "kosten": 70,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "10",
-              "kosten": 140,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "11",
-              "kosten": 280,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 560,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "13",
-              "kosten": 1050,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "14",
-              "kosten": 1750,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "15",
-              "kosten": 3500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "16",
-              "kosten": 3500,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "17",
-              "kosten": 5250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "18",
-              "kosten": 5250,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "19",
-              "kosten": 8750,
-              "lernchance": false
-            }
-          ],
-          "geplanteStufen": []
-        }
-      ]
+      "waffen": []
     },
     {
       "name": "Bogen",
@@ -6480,169 +5990,673 @@
   ],
   "waffenWunschList": [
     {
-      "name": "Einhandschwerter",
+      "name": "Zweihandschlagwaffen",
       "erstkosten": 250,
       "waffen": [
         {
           "erstkosten": null,
           "erfolgswert": null,
-          "name": "Langschwert",
-          "staerke": 31,
-          "geschicklichkeit": 21,
-          "schwierigkeit": 5,
+          "name": "Schlachtbeil",
+          "staerke": 61,
+          "geschicklichkeit": 31,
+          "schwierigkeit": 4,
           "verbesserungen": [
             {
               "erfolgswert": "5",
-              "kosten": 15,
+              "kosten": 12,
               "lernchance": false
             },
             {
               "erfolgswert": "6",
-              "kosten": 15,
+              "kosten": 12,
               "lernchance": false
             },
             {
               "erfolgswert": "7",
-              "kosten": 15,
+              "kosten": 12,
               "lernchance": false
             },
             {
               "erfolgswert": "8",
-              "kosten": 25,
+              "kosten": 20,
               "lernchance": false
             },
             {
               "erfolgswert": "9",
-              "kosten": 50,
+              "kosten": 40,
               "lernchance": false
             },
             {
               "erfolgswert": "10",
-              "kosten": 100,
+              "kosten": 80,
               "lernchance": false
             },
             {
               "erfolgswert": "11",
-              "kosten": 200,
+              "kosten": 160,
               "lernchance": false
             },
             {
               "erfolgswert": "12",
-              "kosten": 400,
+              "kosten": 320,
               "lernchance": false
             },
             {
               "erfolgswert": "13",
-              "kosten": 750,
+              "kosten": 600,
               "lernchance": false
             },
             {
               "erfolgswert": "14",
-              "kosten": 1250,
+              "kosten": 1000,
               "lernchance": false
             },
             {
               "erfolgswert": "15",
-              "kosten": 2500,
+              "kosten": 2000,
               "lernchance": false
             },
             {
               "erfolgswert": "16",
-              "kosten": 2500,
+              "kosten": 2000,
               "lernchance": false
             },
             {
               "erfolgswert": "17",
-              "kosten": 3750,
+              "kosten": 3000,
               "lernchance": false
             },
             {
               "erfolgswert": "18",
-              "kosten": 3750,
+              "kosten": 3000,
               "lernchance": false
             },
             {
               "erfolgswert": "19",
-              "kosten": 6250,
+              "kosten": 5000,
+              "lernchance": false
+            }
+          ],
+          "offeneStufen": [],
+          "geplanteStufen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 20,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 40,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 80,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 160,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 320,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 600,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 1000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 2000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 2000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 3000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 3000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 5000,
+              "lernchance": false
+            }
+          ],
+          "lernen": true
+        }
+      ]
+    },
+    {
+      "name": "Einhandschlagwaffen",
+      "erstkosten": 250,
+      "waffen": [
+        {
+          "erstkosten": null,
+          "erfolgswert": null,
+          "name": "Handaxt",
+          "staerke": 11,
+          "geschicklichkeit": 1,
+          "schwierigkeit": 3,
+          "verbesserungen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 9,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 9,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 9,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 30,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 60,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 120,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 240,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 450,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 1500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 1500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 2250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 2250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 3750,
+              "lernchance": false
+            }
+          ],
+          "offeneStufen": [],
+          "geplanteStufen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 9,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 9,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 9,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 15,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 30,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 60,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 120,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 240,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 450,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 1500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 1500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 2250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 2250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 3750,
+              "lernchance": false
+            }
+          ],
+          "lernen": true
+        },
+        {
+          "erstkosten": null,
+          "erfolgswert": null,
+          "name": "Streitaxt",
+          "staerke": 61,
+          "geschicklichkeit": 11,
+          "schwierigkeit": 4,
+          "verbesserungen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 20,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 40,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 80,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 160,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 320,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 600,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 1000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 2000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 2000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 3000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 3000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 5000,
+              "lernchance": false
+            }
+          ],
+          "offeneStufen": [],
+          "geplanteStufen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 12,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 20,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 40,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 80,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 160,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 320,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 600,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 1000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 2000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 2000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 3000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 3000,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 5000,
+              "lernchance": false
+            }
+          ],
+          "lernen": true
+        }
+      ]
+    },
+    {
+      "name": "waffenloser Kampf",
+      "erstkosten": 250,
+      "waffen": [
+        {
+          "erstkosten": null,
+          "erfolgswert": null,
+          "name": "waffenloser Kampf",
+          "staerke": 21,
+          "geschicklichkeit": 21,
+          "schwierigkeit": 7,
+          "verbesserungen": [
+            {
+              "erfolgswert": "5",
+              "kosten": 21,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "6",
+              "kosten": 21,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "7",
+              "kosten": 21,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "8",
+              "kosten": 35,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "9",
+              "kosten": 70,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "10",
+              "kosten": 140,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 280,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 560,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "13",
+              "kosten": 1050,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "14",
+              "kosten": 1750,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "15",
+              "kosten": 3500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "16",
+              "kosten": 3500,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "17",
+              "kosten": 5250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "18",
+              "kosten": 5250,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "19",
+              "kosten": 8750,
               "lernchance": false
             }
           ],
           "offeneStufen": [
             {
-              "erfolgswert": "11",
-              "kosten": 200,
-              "lernchance": false
-            },
-            {
-              "erfolgswert": "12",
-              "kosten": 400,
-              "lernchance": false
-            },
-            {
               "erfolgswert": "13",
-              "kosten": 750,
+              "kosten": 1050,
               "lernchance": false
             },
             {
               "erfolgswert": "14",
-              "kosten": 1250,
+              "kosten": 1750,
               "lernchance": false
             },
             {
               "erfolgswert": "15",
-              "kosten": 2500,
+              "kosten": 3500,
               "lernchance": false
             },
             {
               "erfolgswert": "16",
-              "kosten": 2500,
+              "kosten": 3500,
               "lernchance": false
             },
             {
               "erfolgswert": "17",
-              "kosten": 3750,
+              "kosten": 5250,
               "lernchance": false
             },
             {
               "erfolgswert": "18",
-              "kosten": 3750,
+              "kosten": 5250,
               "lernchance": false
             },
             {
               "erfolgswert": "19",
-              "kosten": 6250,
+              "kosten": 8750,
               "lernchance": false
             }
           ],
           "geplanteStufen": [
             {
               "erfolgswert": "5",
-              "kosten": 15,
+              "kosten": 21,
               "lernchance": false
             },
             {
               "erfolgswert": "6",
-              "kosten": 15,
+              "kosten": 21,
               "lernchance": false
             },
             {
               "erfolgswert": "7",
-              "kosten": 15,
+              "kosten": 21,
               "lernchance": false
             },
             {
               "erfolgswert": "8",
-              "kosten": 25,
+              "kosten": 35,
               "lernchance": false
             },
             {
               "erfolgswert": "9",
-              "kosten": 50,
+              "kosten": 70,
               "lernchance": false
             },
             {
               "erfolgswert": "10",
-              "kosten": 100,
+              "kosten": 140,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "11",
+              "kosten": 280,
+              "lernchance": false
+            },
+            {
+              "erfolgswert": "12",
+              "kosten": 560,
               "lernchance": false
             }
           ],
@@ -6651,159 +6665,43 @@
       ]
     }
   ],
-  "name": "Hans1",
+  "name": "Belgado",
+  "grad": 1,
   "abenteuertyp": {
     "name": "Söldner",
-    "kuerzel": "Sö"
+    "kuerzel": "Sö",
+    "zauber": false
   },
-  "faehigkeitenGelerntList": [
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "beidhändiger Kampf",
-      "erfolgswert": "-4",
-      "grund": [],
-      "ausnahme": [],
-      "verbesserungen": [],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    }
-  ],
+  "faehigkeitenGelerntList": [],
   "faehigkeitenList": [
     {
       "grundFaktor": 0.5,
       "ausnahmeFaktor": 2,
-      "name": "Athletik",
-      "erstkosten": 25,
-      "startwert": "1",
+      "name": "Ballista bedienen",
+      "erstkosten": 50,
       "grund": [
-        "BN",
-        "BW",
-        "BS",
         "Kr",
-        "Or",
+        "Se",
         "Sö"
       ],
       "ausnahme": [
-        "Ma",
-        "Hx",
-        "Dr",
         "Be",
-        "PH",
-        "PF",
-        "PW",
+        "Dr",
         "Hl",
-        "Th",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PK",
         "PM",
-        "PT"
+        "PT",
+        "PW",
+        "Sc",
+        "Th"
       ],
       "faktor": 0.5,
-      "verbesserungen": [
-        {
-          "erfolgswert": "2",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "3",
-          "kosten": 125
-        },
-        {
-          "erfolgswert": "4",
-          "kosten": 250
-        },
-        {
-          "erfolgswert": "5",
-          "kosten": 500
-        }
-      ],
-      "offeneStufen": [
-        {
-          "erfolgswert": "2",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "3",
-          "kosten": 125
-        },
-        {
-          "erfolgswert": "4",
-          "kosten": 250
-        },
-        {
-          "erfolgswert": "5",
-          "kosten": 500
-        }
-      ],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Balancieren",
-      "erstkosten": 100,
-      "startwert": "12",
-      "grund": [
-        "As",
-        "BW",
-        "Gl",
-        "Se",
-        "Sp",
-        "Wa"
-      ],
-      "ausnahme": [],
-      "faktor": 1,
-      "verbesserungen": [
-        {
-          "erfolgswert": "13",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "14",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "15",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "16",
-          "kosten": 200
-        },
-        {
-          "erfolgswert": "17",
-          "kosten": 400
-        },
-        {
-          "erfolgswert": "18",
-          "kosten": 800
-        }
-      ],
-      "offeneStufen": [
-        {
-          "erfolgswert": "13",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "14",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "15",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "16",
-          "kosten": 200
-        },
-        {
-          "erfolgswert": "17",
-          "kosten": 400
-        },
-        {
-          "erfolgswert": "18",
-          "kosten": 800
-        }
-      ],
+      "verbesserungen": [],
+      "offeneStufen": [],
       "geplanteStufen": []
     },
     {
@@ -7459,36 +7357,6 @@
     {
       "grundFaktor": 0.5,
       "ausnahmeFaktor": 2,
-      "name": "Faustkampf",
-      "erstkosten": 250,
-      "grund": [
-        "BN",
-        "BS",
-        "Se",
-        "Sö"
-      ],
-      "ausnahme": [
-        "Be",
-        "Dr",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PK",
-        "PM",
-        "PT",
-        "PW",
-        "Th"
-      ],
-      "faktor": 0.5,
-      "verbesserungen": [],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
       "name": "Geheimmechanismen öffnen",
       "erstkosten": 800,
       "startwert": "2",
@@ -7612,77 +7480,6 @@
       "faktor": 1,
       "verbesserungen": [],
       "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Geländelauf",
-      "erstkosten": 100,
-      "startwert": "12",
-      "grund": [
-        "BN",
-        "BS",
-        "BW",
-        "Gl",
-        "Sp",
-        "Wa",
-        "Sc"
-      ],
-      "ausnahme": [],
-      "faktor": 1,
-      "verbesserungen": [
-        {
-          "erfolgswert": "13",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "14",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "15",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "16",
-          "kosten": 200
-        },
-        {
-          "erfolgswert": "17",
-          "kosten": 400
-        },
-        {
-          "erfolgswert": "18",
-          "kosten": 800
-        }
-      ],
-      "offeneStufen": [
-        {
-          "erfolgswert": "13",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "14",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "15",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "16",
-          "kosten": 200
-        },
-        {
-          "erfolgswert": "17",
-          "kosten": 400
-        },
-        {
-          "erfolgswert": "18",
-          "kosten": 800
-        }
-      ],
       "geplanteStufen": []
     },
     {
@@ -7835,160 +7632,6 @@
     {
       "grundFaktor": 0.5,
       "ausnahmeFaktor": 2,
-      "name": "Kampf in Vollrüstung",
-      "erstkosten": 2000,
-      "grund": [
-        "Kr",
-        "Sö"
-      ],
-      "ausnahme": [
-        "As",
-        "Ba",
-        "Sp",
-        "Be",
-        "Dr",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PK",
-        "PM",
-        "PT",
-        "PW",
-        "Sc",
-        "Th"
-      ],
-      "faktor": 0.5,
-      "verbesserungen": [],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Kampf zu Pferd",
-      "erstkosten": 100,
-      "grund": [
-        "BN",
-        "BS",
-        "BW",
-        "Gl",
-        "Hä",
-        "Kr",
-        "Or",
-        "Sö"
-      ],
-      "ausnahme": [
-        "Se",
-        "Sp",
-        "Be",
-        "Dr",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PM",
-        "PT",
-        "PW",
-        "Sc",
-        "Th"
-      ],
-      "faktor": 0.5,
-      "verbesserungen": [],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Kampf vom Streitwagen",
-      "erstkosten": 100,
-      "grund": [
-        "BN",
-        "BS",
-        "Kr",
-        "Sö"
-      ],
-      "ausnahme": [
-        "As",
-        "Se",
-        "Sp",
-        "Be",
-        "Dr",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PK",
-        "PM",
-        "PT",
-        "PW",
-        "Sc",
-        "Th"
-      ],
-      "faktor": 0.5,
-      "verbesserungen": [],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Kampftaktik",
-      "erstkosten": 100,
-      "startwert": "1",
-      "grund": [
-        "Kr",
-        "Or",
-        "Se",
-        "Sö"
-      ],
-      "ausnahme": [
-        "As",
-        "Ba",
-        "Sp",
-        "Be",
-        "Dr",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PM",
-        "PT",
-        "PW",
-        "Sc",
-        "Th"
-      ],
-      "faktor": 0.5,
-      "verbesserungen": [
-        {
-          "erfolgswert": "2",
-          "kosten": 500
-        },
-        {
-          "erfolgswert": "3",
-          "kosten": 1000
-        }
-      ],
-      "offeneStufen": [
-        {
-          "erfolgswert": "2",
-          "kosten": 500
-        },
-        {
-          "erfolgswert": "3",
-          "kosten": 1000
-        }
-      ],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
       "name": "Kanufahren",
       "erstkosten": 100,
       "startwert": "12",
@@ -8057,152 +7700,6 @@
     {
       "grundFaktor": 0.5,
       "ausnahmeFaktor": 2,
-      "name": "Katapult bedienen",
-      "erstkosten": 50,
-      "grund": [
-        "Kr",
-        "Se",
-        "Sö"
-      ],
-      "ausnahme": [
-        "Be",
-        "Dr",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PK",
-        "PM",
-        "PT",
-        "PW",
-        "Sc",
-        "Th"
-      ],
-      "faktor": 0.5,
-      "verbesserungen": [],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Schleichen",
-      "erstkosten": 400,
-      "startwert": "4",
-      "grund": [
-        "As",
-        "Sp"
-      ],
-      "ausnahme": [
-        "Ma",
-        "PK"
-      ],
-      "faktor": 1,
-      "verbesserungen": [
-        {
-          "erfolgswert": "5",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "6",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "7",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "8",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "9",
-          "kosten": 200
-        },
-        {
-          "erfolgswert": "10",
-          "kosten": 200
-        }
-      ],
-      "offeneStufen": [
-        {
-          "erfolgswert": "5",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "6",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "7",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "8",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "9",
-          "kosten": 200
-        },
-        {
-          "erfolgswert": "10",
-          "kosten": 200
-        }
-      ],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Klettern",
-      "erstkosten": 100,
-      "startwert": "12",
-      "grund": [
-        "As",
-        "BS",
-        "BN",
-        "BW",
-        "Gl",
-        "Se",
-        "Sp",
-        "Wa"
-      ],
-      "ausnahme": [],
-      "faktor": 1,
-      "verbesserungen": [
-        {
-          "erfolgswert": "13",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "14",
-          "kosten": 50
-        },
-        {
-          "erfolgswert": "15",
-          "kosten": 100
-        },
-        {
-          "erfolgswert": "16",
-          "kosten": 200
-        },
-        {
-          "erfolgswert": "17",
-          "kosten": 400
-        },
-        {
-          "erfolgswert": "18",
-          "kosten": 800
-        }
-      ],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
       "name": "Kräuterkunde",
       "erstkosten": 100,
       "startwert": "2",
@@ -8262,77 +7759,52 @@
           "kosten": 400
         }
       ],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Laufen",
-      "erstkosten": 50,
-      "startwert": "2",
-      "grund": [
-        "BN",
-        "BW",
-        "BS",
-        "Wa",
-        "Sc"
-      ],
-      "ausnahme": [
-        "Se",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PK",
-        "PM",
-        "PT",
-        "PW"
-      ],
-      "faktor": 1,
-      "verbesserungen": [
+      "offeneStufen": [
         {
           "erfolgswert": "3",
-          "kosten": 100
+          "kosten": 20
         },
         {
           "erfolgswert": "4",
-          "kosten": 300
+          "kosten": 20
         },
         {
           "erfolgswert": "5",
-          "kosten": 500
+          "kosten": 50
         },
         {
           "erfolgswert": "6",
-          "kosten": 1000
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "7",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "8",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "11",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "12",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "13",
+          "kosten": 400
         }
       ],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Lesen/Schreiben",
-      "erstkosten": 100,
-      "grund": [
-        "Hä",
-        "Hl",
-        "Hx",
-        "Ma",
-        "PF",
-        "PH",
-        "PK",
-        "PM",
-        "PT",
-        "PW"
-      ],
-      "ausnahme": [],
-      "faktor": 1,
-      "verbesserungen": [],
-      "offeneStufen": [],
       "geplanteStufen": []
     },
     {
@@ -8416,29 +7888,7 @@
           "kosten": 800
         }
       ],
-      "offeneStufen": [],
-      "geplanteStufen": []
-    },
-    {
-      "grundFaktor": 0.5,
-      "ausnahmeFaktor": 2,
-      "name": "Menschenkenntnis",
-      "erstkosten": 250,
-      "startwert": 2,
-      "grund": [
-        "Ba",
-        "Hä",
-        "Gl",
-        "Sp",
-        "Se",
-        "Hl",
-        "PW"
-      ],
-      "ausnahme": [
-        "Be"
-      ],
-      "faktor": 1,
-      "verbesserungen": [
+      "offeneStufen": [
         {
           "erfolgswert": "3",
           "kosten": 50
@@ -8472,7 +7922,6 @@
           "kosten": 800
         }
       ],
-      "offeneStufen": [],
       "geplanteStufen": []
     },
     {
@@ -8538,7 +7987,40 @@
           "kosten": 800
         }
       ],
-      "offeneStufen": [],
+      "offeneStufen": [
+        {
+          "erfolgswert": "3",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "7",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "8",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 800
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 800
+        }
+      ],
       "geplanteStufen": []
     },
     {
@@ -8619,7 +8101,52 @@
           "kosten": 800
         }
       ],
-      "offeneStufen": [],
+      "offeneStufen": [
+        {
+          "erfolgswert": "3",
+          "kosten": 40
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 40
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "7",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "8",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "11",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "12",
+          "kosten": 800
+        },
+        {
+          "erfolgswert": "13",
+          "kosten": 800
+        }
+      ],
       "geplanteStufen": []
     },
     {
@@ -8688,7 +8215,52 @@
           "kosten": 800
         }
       ],
-      "offeneStufen": [],
+      "offeneStufen": [
+        {
+          "erfolgswert": "3",
+          "kosten": 40
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 40
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "7",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "8",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "11",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "12",
+          "kosten": 800
+        },
+        {
+          "erfolgswert": "13",
+          "kosten": 800
+        }
+      ],
       "geplanteStufen": []
     },
     {
@@ -8716,37 +8288,213 @@
       "verbesserungen": [],
       "offeneStufen": [],
       "geplanteStufen": []
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Schleichen",
+      "erstkosten": 400,
+      "startwert": "4",
+      "grund": [
+        "As",
+        "Sp"
+      ],
+      "ausnahme": [
+        "Ma",
+        "PK"
+      ],
+      "faktor": 1,
+      "verbesserungen": [
+        {
+          "erfolgswert": "5",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "7",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "8",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 200
+        }
+      ],
+      "offeneStufen": [
+        {
+          "erfolgswert": "5",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "7",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "8",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 200
+        }
+      ],
+      "geplanteStufen": []
     }
   ],
   "faehigkeitenWunschList": [
     {
       "grundFaktor": 0.5,
       "ausnahmeFaktor": 2,
-      "name": "Ballista bedienen",
-      "erstkosten": 50,
+      "name": "Athletik",
+      "erstkosten": 25,
+      "startwert": "1",
+      "lernen": true,
       "grund": [
+        "BN",
+        "BW",
+        "BS",
         "Kr",
-        "Se",
+        "Or",
         "Sö"
       ],
       "ausnahme": [
-        "Be",
-        "Dr",
-        "Hl",
-        "Hx",
         "Ma",
-        "PF",
+        "Hx",
+        "Dr",
+        "Be",
         "PH",
-        "PK",
-        "PM",
-        "PT",
+        "PF",
         "PW",
-        "Sc",
-        "Th"
+        "Hl",
+        "Th",
+        "PM",
+        "PT"
       ],
       "faktor": 0.5,
-      "verbesserungen": [],
+      "verbesserungen": [
+        {
+          "erfolgswert": "2",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "3",
+          "kosten": 125
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 250
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 500
+        }
+      ],
       "offeneStufen": [],
+      "geplanteStufen": [
+        {
+          "erfolgswert": "2",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "3",
+          "kosten": 125
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 250
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 500
+        }
+      ]
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Balancieren",
+      "erstkosten": 100,
+      "startwert": "12",
+      "grund": [
+        "As",
+        "BW",
+        "Gl",
+        "Se",
+        "Sp",
+        "Wa"
+      ],
+      "ausnahme": [],
+      "faktor": 1,
+      "verbesserungen": [
+        {
+          "erfolgswert": "13",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "14",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "15",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "16",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "17",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "18",
+          "kosten": 800
+        }
+      ],
+      "offeneStufen": [
+        {
+          "erfolgswert": "13",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "14",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "15",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "16",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "17",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "18",
+          "kosten": 800
+        }
+      ],
       "geplanteStufen": []
     },
     {
@@ -8755,7 +8503,7 @@
       "name": "beidhändiger Kampf",
       "erstkosten": 750,
       "startwert": "-4",
-      "erfolgswert": "-4",
+      "lernen": true,
       "grund": [
         "BN",
         "BW",
@@ -8795,12 +8543,7 @@
           "kosten": 2000
         }
       ],
-      "offeneStufen": [
-        {
-          "erfolgswert": "-1",
-          "kosten": 2000
-        }
-      ],
+      "offeneStufen": [],
       "geplanteStufen": [
         {
           "erfolgswert": "-3",
@@ -8809,9 +8552,43 @@
         {
           "erfolgswert": "-2",
           "kosten": 1500
+        },
+        {
+          "erfolgswert": "-1",
+          "kosten": 2000
         }
+      ]
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Faustkampf",
+      "erstkosten": 250,
+      "lernen": true,
+      "grund": [
+        "BN",
+        "BS",
+        "Se",
+        "Sö"
       ],
-      "lernen": true
+      "ausnahme": [
+        "Be",
+        "Dr",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PK",
+        "PM",
+        "PT",
+        "PW",
+        "Th"
+      ],
+      "faktor": 0.5,
+      "verbesserungen": [],
+      "offeneStufen": [],
+      "geplanteStufen": []
     },
     {
       "grundFaktor": 0.5,
@@ -8819,6 +8596,7 @@
       "name": "Gassenwissen",
       "erstkosten": 100,
       "startwert": "2",
+      "lernen": true,
       "grund": [
         "As",
         "Ba",
@@ -8871,6 +8649,16 @@
       ],
       "offeneStufen": [
         {
+          "erfolgswert": "10",
+          "kosten": 250
+        },
+        {
+          "erfolgswert": "11",
+          "kosten": 250
+        }
+      ],
+      "geplanteStufen": [
+        {
           "erfolgswert": "3",
           "kosten": 25
         },
@@ -8897,14 +8685,76 @@
         {
           "erfolgswert": "9",
           "kosten": 125
+        }
+      ]
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Geländelauf",
+      "erstkosten": 100,
+      "startwert": "12",
+      "grund": [
+        "BN",
+        "BS",
+        "BW",
+        "Gl",
+        "Sp",
+        "Wa",
+        "Sc"
+      ],
+      "ausnahme": [],
+      "faktor": 1,
+      "verbesserungen": [
+        {
+          "erfolgswert": "13",
+          "kosten": 50
         },
         {
-          "erfolgswert": "10",
-          "kosten": 250
+          "erfolgswert": "14",
+          "kosten": 50
         },
         {
-          "erfolgswert": "11",
-          "kosten": 250
+          "erfolgswert": "15",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "16",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "17",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "18",
+          "kosten": 800
+        }
+      ],
+      "offeneStufen": [
+        {
+          "erfolgswert": "13",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "14",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "15",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "16",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "17",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "18",
+          "kosten": 800
         }
       ],
       "geplanteStufen": []
@@ -8915,6 +8765,7 @@
       "name": "Glücksspiel",
       "erstkosten": 100,
       "startwert": "15",
+      "lernen": true,
       "grund": [
         "Ba",
         "Gl",
@@ -8926,59 +8777,461 @@
       "faktor": 0.5,
       "verbesserungen": [
         {
-          "erfolgswert": "5",
+          "erfolgswert": "16",
           "kosten": 25
+        }
+      ],
+      "offeneStufen": [],
+      "geplanteStufen": [
+        {
+          "erfolgswert": "16",
+          "kosten": 25
+        }
+      ]
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Kampf in Vollrüstung",
+      "erstkosten": 2000,
+      "lernen": true,
+      "grund": [
+        "Kr",
+        "Sö"
+      ],
+      "ausnahme": [
+        "As",
+        "Ba",
+        "Sp",
+        "Be",
+        "Dr",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PK",
+        "PM",
+        "PT",
+        "PW",
+        "Sc",
+        "Th"
+      ],
+      "faktor": 0.5,
+      "verbesserungen": [],
+      "offeneStufen": [],
+      "geplanteStufen": []
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Kampf vom Streitwagen",
+      "erstkosten": 100,
+      "lernen": true,
+      "grund": [
+        "BN",
+        "BS",
+        "Kr",
+        "Sö"
+      ],
+      "ausnahme": [
+        "As",
+        "Se",
+        "Sp",
+        "Be",
+        "Dr",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PK",
+        "PM",
+        "PT",
+        "PW",
+        "Sc",
+        "Th"
+      ],
+      "faktor": 0.5,
+      "verbesserungen": [],
+      "offeneStufen": [],
+      "geplanteStufen": []
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Kampf zu Pferd",
+      "erstkosten": 100,
+      "lernen": true,
+      "grund": [
+        "BN",
+        "BS",
+        "BW",
+        "Gl",
+        "Hä",
+        "Kr",
+        "Or",
+        "Sö"
+      ],
+      "ausnahme": [
+        "Se",
+        "Sp",
+        "Be",
+        "Dr",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PM",
+        "PT",
+        "PW",
+        "Sc",
+        "Th"
+      ],
+      "faktor": 0.5,
+      "verbesserungen": [],
+      "offeneStufen": [],
+      "geplanteStufen": []
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Kampftaktik",
+      "erstkosten": 100,
+      "startwert": "1",
+      "lernen": true,
+      "grund": [
+        "Kr",
+        "Or",
+        "Se",
+        "Sö"
+      ],
+      "ausnahme": [
+        "As",
+        "Ba",
+        "Sp",
+        "Be",
+        "Dr",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PM",
+        "PT",
+        "PW",
+        "Sc",
+        "Th"
+      ],
+      "faktor": 0.5,
+      "verbesserungen": [
+        {
+          "erfolgswert": "2",
+          "kosten": 500
         },
         {
-          "erfolgswert": "6",
-          "kosten": 25
+          "erfolgswert": "3",
+          "kosten": 1000
+        }
+      ],
+      "offeneStufen": [],
+      "geplanteStufen": [
+        {
+          "erfolgswert": "2",
+          "kosten": 500
         },
         {
-          "erfolgswert": "7",
+          "erfolgswert": "3",
+          "kosten": 1000
+        }
+      ]
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Katapult bedienen",
+      "erstkosten": 50,
+      "lernen": true,
+      "grund": [
+        "Kr",
+        "Se",
+        "Sö"
+      ],
+      "ausnahme": [
+        "Be",
+        "Dr",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PK",
+        "PM",
+        "PT",
+        "PW",
+        "Sc",
+        "Th"
+      ],
+      "faktor": 0.5,
+      "verbesserungen": [],
+      "offeneStufen": [],
+      "geplanteStufen": []
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Klettern",
+      "erstkosten": 100,
+      "startwert": "12",
+      "lernen": true,
+      "grund": [
+        "As",
+        "BS",
+        "BN",
+        "BW",
+        "Gl",
+        "Se",
+        "Sp",
+        "Wa"
+      ],
+      "ausnahme": [],
+      "faktor": 1,
+      "verbesserungen": [
+        {
+          "erfolgswert": "13",
           "kosten": 50
         },
         {
-          "erfolgswert": "8",
+          "erfolgswert": "14",
           "kosten": 50
         },
         {
-          "erfolgswert": "9",
+          "erfolgswert": "15",
           "kosten": 100
         },
         {
-          "erfolgswert": "10",
-          "kosten": 100
+          "erfolgswert": "16",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "17",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "18",
+          "kosten": 800
         }
       ],
       "offeneStufen": [
         {
-          "erfolgswert": "9",
-          "kosten": 100
+          "erfolgswert": "16",
+          "kosten": 200
         },
         {
-          "erfolgswert": "10",
-          "kosten": 100
+          "erfolgswert": "17",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "18",
+          "kosten": 800
         }
       ],
       "geplanteStufen": [
         {
+          "erfolgswert": "13",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "14",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "15",
+          "kosten": 100
+        }
+      ]
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Laufen",
+      "erstkosten": 50,
+      "startwert": "2",
+      "lernen": true,
+      "grund": [
+        "BN",
+        "BW",
+        "BS",
+        "Wa",
+        "Sc"
+      ],
+      "ausnahme": [
+        "Se",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PK",
+        "PM",
+        "PT",
+        "PW"
+      ],
+      "faktor": 1,
+      "verbesserungen": [
+        {
+          "erfolgswert": "3",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 300
+        },
+        {
           "erfolgswert": "5",
-          "kosten": 25
+          "kosten": 500
         },
         {
           "erfolgswert": "6",
-          "kosten": 25
+          "kosten": 1000
+        }
+      ],
+      "offeneStufen": [
+        {
+          "erfolgswert": "4",
+          "kosten": 300
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 500
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 1000
+        }
+      ],
+      "geplanteStufen": [
+        {
+          "erfolgswert": "3",
+          "kosten": 100
+        }
+      ]
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Lesen/Schreiben",
+      "erstkosten": 100,
+      "lernen": true,
+      "grund": [
+        "Hä",
+        "Hl",
+        "Hx",
+        "Ma",
+        "PF",
+        "PH",
+        "PK",
+        "PM",
+        "PT",
+        "PW"
+      ],
+      "ausnahme": [],
+      "faktor": 1,
+      "verbesserungen": [],
+      "offeneStufen": [],
+      "geplanteStufen": []
+    },
+    {
+      "grundFaktor": 0.5,
+      "ausnahmeFaktor": 2,
+      "name": "Menschenkenntnis",
+      "erstkosten": 250,
+      "startwert": 2,
+      "lernen": true,
+      "grund": [
+        "Ba",
+        "Hä",
+        "Gl",
+        "Sp",
+        "Se",
+        "Hl",
+        "PW"
+      ],
+      "ausnahme": [
+        "Be"
+      ],
+      "faktor": 1,
+      "verbesserungen": [
+        {
+          "erfolgswert": "3",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 200
         },
         {
           "erfolgswert": "7",
-          "kosten": 50
+          "kosten": 400
         },
         {
           "erfolgswert": "8",
-          "kosten": 50
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 800
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 800
         }
       ],
-      "lernen": true
+      "offeneStufen": [
+        {
+          "erfolgswert": "8",
+          "kosten": 400
+        },
+        {
+          "erfolgswert": "9",
+          "kosten": 800
+        },
+        {
+          "erfolgswert": "10",
+          "kosten": 800
+        }
+      ],
+      "geplanteStufen": [
+        {
+          "erfolgswert": "3",
+          "kosten": 50
+        },
+        {
+          "erfolgswert": "4",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "5",
+          "kosten": 100
+        },
+        {
+          "erfolgswert": "6",
+          "kosten": 200
+        },
+        {
+          "erfolgswert": "7",
+          "kosten": 400
+        }
+      ]
     }
   ],
   "waffenGelerntList": []

@@ -1,8 +1,8 @@
 <div class="w3-row"
-     *ngIf="charakter">
+     *ngIf="domainService.currentCharakter">
     <div class="w3-col m6 l6">
         <h2>Waffen</h2>
-        <div *ngFor="let grundkenntnis of charakter.waffenList"
+        <div *ngFor="let grundkenntnis of domainService.currentCharakter.waffenList"
              [ngClass]="{'grund':grundkenntnis.faktor<1, 'ausnahme':grundkenntnis.faktor>1}">
             <div class="w3-row">
                 <div class="w3-col m6 l6">{{grundkenntnis.name}}</div>
@@ -19,7 +19,7 @@
     <div class="w3-col m6 l6">
         <h2>Lernliste</h2>
         Kosten : {{berechneGeplanteKosten()}}
-        <div *ngFor="let grundkenntnis of charakter.waffenWunschList"
+        <div *ngFor="let grundkenntnis of domainService.currentCharakter.waffenWunschList"
              [ngClass]="{'grund':grundkenntnis.faktor<1, 'ausnahme':grundkenntnis.faktor>1}">
             <div *ngIf="grundkenntnis.waffen.length>0">
                 <span>{{grundkenntnis.name}}</span>

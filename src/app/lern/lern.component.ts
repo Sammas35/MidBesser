@@ -21,7 +21,6 @@ export class LernComponent implements OnInit {
     @Output() remove = new EventEmitter<LernEntity>();
 
     triggerRemoveEvent(lern:LernEntity) {
-        console.log('triggerRemoveEvent');
         this.remove.emit(lern);
     }
 

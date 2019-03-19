@@ -1,8 +1,8 @@
 <div class="w3-row"
-     *ngIf="charakter">
+     *ngIf="domainService.currentCharakter">
     <div class="w3-col m3 l3">
         <h2>Fähigkeiten</h2>
-        <div *ngFor="let faehigkeit of charakter.faehigkeitenList"
+        <div *ngFor="let faehigkeit of domainService.currentCharakter.faehigkeitenList"
              class="faehigkeit w3-row"
              [ngClass]="{'grund':faehigkeit.faktor<1, 'ausnahme':faehigkeit.faktor>1}"
              (click)=add(faehigkeit)>
@@ -13,7 +13,7 @@
     <div class="w3-col m6 l6">
         <h2>Lernliste</h2>
         Kosten : {{berechneGeplanteKosten()}}
-        <div *ngFor="let faehigkeit of charakter.faehigkeitenWunschList">
+        <div *ngFor="let faehigkeit of domainService.currentCharakter.faehigkeitenWunschList">
             <div [ngClass]="{'grund':faehigkeit.faktor<1, 'ausnahme':faehigkeit.faktor>1}">
 
                 <app-lern (remove)="remove($event)"

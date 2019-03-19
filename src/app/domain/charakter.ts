@@ -30,6 +30,8 @@ export class Charakter extends NamedEntity {
         result.faehigkeitenList = Faehigkeit.deserializeList(charakter.faehigkeitenList);
         result.faehigkeitenWunschList = Faehigkeit.deserializeList(charakter.faehigkeitenWunschList);
 
+        result.waffenList = Waffengrundkenntnis.deserializeList(charakter.waffenList, result.abenteuertyp.kuerzel);
+
         return result;
     }
 
@@ -39,7 +41,7 @@ export class Charakter extends NamedEntity {
 
         this.waffenGelerntList = this.waffenGelerntList || [];
 
-        if(!this.isInList(waffengrundkenntnis, this.waffenList)){
+        if (!this.isInList(waffengrundkenntnis, this.waffenList)) {
             this.waffenList.push(waffengrundkenntnis);
         }
 
@@ -61,7 +63,9 @@ export class Charakter extends NamedEntity {
         this.faehigkeitenWunschList = this.faehigkeitenWunschList || [];
         this.faehigkeitenList = this.faehigkeitenList || [];
 
-        if (gelernt = <Faehigkeit>this.findInList(faehigkeit, this.faehigkeitenWunschList)) {
+        gelernt = <Faehigkeit>this.findInList(faehigkeit, this.faehigkeitenWunschList)
+
+        if (gelernt) {
             this.addToWunschlist(faehigkeit, gelernt);
         } else {
             this.addToList(faehigkeit, this.faehigkeitenList);
@@ -71,19 +75,31 @@ export class Charakter extends NamedEntity {
     public berechneGeplanteKosten(): number {
         let result: number;
 
-        result = this.faehigkeitenWunschList.reduce((prev, curr) => {
-            return prev + curr.berechneGeplanteKosten();
-        }, 0);
+        if (this.faehigkeitenWunschList) {
+            result = this.faehigkeitenWunschList.reduce((prev, curr) => {
+                return prev + curr.berechneGeplanteKosten();
+            }, 0);
+        }
 
-        result = this.waffenWunschList.reduce((prev, curr) => {
-            return prev + curr.berechneGeplanteKosten();
-        }, result);
+        if (this.waffenWunschList) {
+            result = this.waffenWunschList.reduce((prev, curr) => {
+                return prev + curr.berechneGeplanteKosten();
+            }, result);
+        }
 
         return result;
     }
 
     public hatSprueche(): boolean {
-        return this.abenteuertyp.zauber;
+        if (this.abenteuertyp) {
+            return this.abenteuertyp.zauber;
+        }
+        return false;
+    }
+
+    lernPermanent() {
+        this.lernPermanentFaehigkeiten();
+        this.lernPermanentWaffen();
     }
 
     private addToList(faehigkeit: LernEntity, lernEntityList: LernEntity[]) {
@@ -123,5 +139,34 @@ export class Charakter extends NamedEntity {
 
     private findInList(lernEntity: LernEntity, lernEntityList: LernEntity[]) {
         return lernEntityList.find((f) => f.name === lernEntity.name);
+    }
+
+    private lernPermanentFaehigkeiten() {
+        this.faehigkeitenWunschList.forEach((f) => {
+            if (f.lernen) {
+                f.gelernt = true;
+            }
+
+            if (f.geplanteStufen.length > 0) {
+                f.erfolgswert = f.geplanteStufen[f.geplanteStufen.length - 1].erfolgswert;
+                f.geplanteStufen = [];
+            }
+        });
+    }
+
+    private lernPermanentWaffen() {
+        this.waffenWunschList.forEach((wg) => {
+            let waffengrundkenntnisGelernt = false;
+
+            wg.waffen.forEach((w) => {
+                if (w.geplanteStufen.length > 0) {
+                    waffengrundkenntnisGelernt = true;
+                    w.gelernt = true;
+                    w.erfolgswert = w.geplanteStufen[w.geplanteStufen.length - 1].erfolgswert;
+                    w.geplanteStufen = [];
+                }
+            });
+            wg.gelernt = waffengrundkenntnisGelernt;
+        })
     }
 }
