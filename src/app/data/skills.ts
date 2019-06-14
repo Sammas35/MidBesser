@@ -1,5 +1,75 @@
 export const SKILLS = [
     {
+        'name': 'Alchimie',
+        'erstkosten': 100,
+        'startwert': '2',
+        'grund': [
+            'Ma',
+            'Th'
+        ],
+        'ausnahme': [
+            'As',
+            'Ba',
+            'BN',
+            'BS',
+            'BW',
+            'Gl',
+            'Hä',
+            'Kr',
+            'Or',
+            'Se',
+            'Sö',
+            'Sp',
+            'Wa',
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '3',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '4',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '5',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '7',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 400
+            }
+        ]
+    },
+    {
         'name': 'Athletik',
         'erstkosten': 50,
         'startwert': '1',
@@ -224,6 +294,26 @@ export const SKILLS = [
         ]
     },
     {
+        'name': 'Binden',
+        'erstkosten': 10000,
+        'startwert': '6',
+        'grund': [
+            'Th'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'Sc'
+        ]
+    },
+    {
         'name': 'Bogen zu Pferd',
         'erstkosten': 200,
         'grund': [
@@ -263,13 +353,145 @@ export const SKILLS = [
             'Ma',
             'PF',
             'PH',
-            'PK',
             'PM',
             'PT',
             'PW',
             'Sc',
             'Th'
         ]
+    },
+    {
+        'name': 'Dämonenamulett verzaubern',
+        'erstkosten': 500,
+        'grund': [
+            'Th'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc'
+        ]
+    },
+    {
+        'name': 'Erste Hilfe',
+        'erstkosten': 100,
+        'grund': [
+            'As',
+            'Sc',
+            'PF'
+        ],
+        'ausnahme': [
+        ],
+    },
+    {
+        'name': 'Fechten',
+        'erstkosten': 800,
+        'startwert': '4',
+        'grund': [
+            'As',
+            'Gl',
+            'Ba',
+            'Sp'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Th'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '5',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '7',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 500
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 500
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 1000
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 1000
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 2000
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 2000
+            }
+        ]
+    },
+    {
+        'name': 'Fechten tevar. Stil',
+        'erstkosten': 400,
+        'grund': [
+            'As',
+            'Gl',
+            'Ba',
+            'Sp'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Th'
+        ],
     },
     {
         'name': 'Fallen entdecken',
@@ -848,6 +1070,31 @@ export const SKILLS = [
         'ausnahme': []
     },
     {
+        'name': 'Kampf in Schlachtreihe',
+        'erstkosten': 50,
+        'grund': [
+            'Kr',
+            'Or',
+            'Sö',
+            'BN'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Th'
+        ]
+    },
+    {
         'name': 'Kampf in Vollrüstung',
         'erstkosten': 4000,
         'grund': [
@@ -1072,8 +1319,7 @@ export const SKILLS = [
                 'kosten': 800
             }
         ]
-    }
-    ,
+    },
     {
         'name': 'Kräuterkunde',
         'erstkosten': 100,
@@ -1133,8 +1379,7 @@ export const SKILLS = [
                 'kosten': 400
             }
         ]
-    }
-    ,
+    },
     {
         'name': 'Laufen',
         'erstkosten': 50,
@@ -1176,8 +1421,7 @@ export const SKILLS = [
                 'kosten': 1000
             }
         ]
-    }
-    ,
+    },
     {
         'name': 'Lesen/Schreiben',
         'erstkosten': 100,
@@ -1194,8 +1438,7 @@ export const SKILLS = [
             'PW'
         ],
         'ausnahme': []
-    }
-    ,
+    },
     {
         'name': 'Lesen von Zauberschrift',
         'erstkosten': 60,
@@ -1225,8 +1468,7 @@ export const SKILLS = [
             'Sp',
             'Wa',
         ]
-    }
-    ,
+    },
     {
         'name': 'Lippenlesen',
         'erstkosten': 250,
@@ -1269,8 +1511,7 @@ export const SKILLS = [
                 'kosten': 800
             },
         ]
-    }
-    ,
+    },
     {
         'name': 'Menschenkenntnis',
         'erstkosten': 250,
@@ -1321,8 +1562,7 @@ export const SKILLS = [
                 'kosten': 800
             },
         ]
-    }
-    ,
+    },
     {
         'name': 'Meucheln',
         'erstkosten': 800,
@@ -1383,8 +1623,7 @@ export const SKILLS = [
                 'kosten': 800
             },
         ]
-    }
-    ,
+    },
     {
         'name': 'Musizieren',
         'erstkosten': 150,
@@ -1392,8 +1631,7 @@ export const SKILLS = [
             'Ba'
         ],
         'ausnahme': []
-    }
-    ,
+    },
     {
         'name': 'Naturkunde',
         'erstkosten': 100,
@@ -1455,8 +1693,7 @@ export const SKILLS = [
                 'kosten': 400
             }
         ]
-    }
-    ,
+    },
     {
         'name': 'Pflanzenkunde',
         'erstkosten': 100,
@@ -1520,8 +1757,7 @@ export const SKILLS = [
                 'kosten': 400
             }
         ]
-    }
-    ,
+    },
     {
         'name': 'Rechnen',
         'erstkosten': 100,
@@ -1541,19 +1777,183 @@ export const SKILLS = [
             'Wa',
             'Sc',
         ]
-    }
-    ,
+    },
     {
-        'name': 'Schleichen',
-        'erstkosten': 400,
+        'name': 'Reiten',
+        'erstkosten': 100,
+        'startwert': '12',
+        'grund': [
+            'As',
+            'Ba',
+            'BN',
+            'BS',
+            'BW',
+            'Gl',
+            'Hä',
+            'Kr',
+            'Or',
+            'Se',
+            'Sp',
+            'Sö',
+            'Wa',
+            'PK',
+            'Sc'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '13',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '17',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '18',
+                'kosten': 800
+            }
+        ]
+    },
+    {
+        'name': 'Rudern',
+        'erstkosten': 100,
+        'startwert': '12',
+        'grund': [
+            'BN',
+            'BW',
+            'Hä',
+            'Se',
+            'Wa'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '13',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '17',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '18',
+                'kosten': 800
+            }
+        ]
+    },
+    {
+        'name': 'Sagenkunde',
+        'erstkosten': 100,
+        'startwert': '2',
+        'grund': [
+            'Ba',
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Th'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '3',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '4',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '5',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '7',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 400
+            }
+        ]
+    },
+    {
+        'name': 'Scharfschiessen',
+        'erstkosten': 800,
         'startwert': '4',
         'grund': [
             'As',
-            'Sp'
+            'Wa'
         ],
         'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
             'Ma',
-            'PK'
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW'
         ],
         'verbesserungen': [
             {
@@ -1579,6 +1979,85 @@ export const SKILLS = [
             {
                 'erfolgswert': '10',
                 'kosten': 200
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 500
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 500
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 1000
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 1000
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 2000
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 2000
+            }
+        ]
+    },
+    {
+        'name': 'Schleichen',
+        'erstkosten': 400,
+        'startwert': '2',
+        'grund': [
+            'As',
+            'Sp'
+        ],
+        'ausnahme': [
+            'Ma',
+            'PK'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '3',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '4',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '5',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '7',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 800
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 800
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 1600
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 1600
             }
         ]
     },
@@ -1707,8 +2186,7 @@ export const SKILLS = [
             'Sö',
             'Wa'
         ],
-        'ausnahme': [
-        ],
+        'ausnahme': [],
         'verbesserungen': [
             {
                 'erfolgswert': '13',
@@ -1744,8 +2222,7 @@ export const SKILLS = [
             'Hä',
             'Se'
         ],
-        'ausnahme': [
-        ],
+        'ausnahme': [],
         'verbesserungen': [
             {
                 'erfolgswert': '13',
@@ -1782,8 +2259,7 @@ export const SKILLS = [
             'Se',
             'Sp'
         ],
-        'ausnahme': [
-        ],
+        'ausnahme': [],
         'verbesserungen': [
             {
                 'erfolgswert': '7',
@@ -1819,8 +2295,7 @@ export const SKILLS = [
             'BN',
             'Wa'
         ],
-        'ausnahme': [
-        ],
+        'ausnahme': [],
         'verbesserungen': [
             {
                 'erfolgswert': '13',
@@ -1862,8 +2337,7 @@ export const SKILLS = [
             'Hl',
             'PW'
         ],
-        'ausnahme': [
-        ],
+        'ausnahme': [],
         'verbesserungen': [
             {
                 'erfolgswert': '2',
@@ -1997,7 +2471,7 @@ export const SKILLS = [
     {
         'name': 'Stehlen',
         'erstkosten': 300,
-        'startwert': '2',
+        'startwert': '6',
         'grund': [
             'Sp'
         ],
@@ -2022,44 +2496,48 @@ export const SKILLS = [
         ],
         'verbesserungen': [
             {
-                'erfolgswert': '3',
-                'kosten': 100
-            },
-            {
-                'erfolgswert': '4',
-                'kosten': 100
-            },
-            {
-                'erfolgswert': '5',
-                'kosten': 200
-            },
-            {
-                'erfolgswert': '6',
-                'kosten': 200
-            },
-            {
                 'erfolgswert': '7',
-                'kosten': 400
+                'kosten': 100
             },
             {
                 'erfolgswert': '8',
-                'kosten': 400
+                'kosten': 100
             },
             {
                 'erfolgswert': '9',
-                'kosten': 800
+                'kosten': 100
             },
             {
                 'erfolgswert': '10',
-                'kosten': 800
+                'kosten': 200
             },
             {
                 'erfolgswert': '11',
-                'kosten': 1600
+                'kosten': 200
             },
             {
                 'erfolgswert': '12',
-                'kosten': 1600
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 800
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 800
+            },
+            {
+                'erfolgswert': '17',
+                'kosten': 800
             }
         ]
     },
@@ -2158,6 +2636,653 @@ export const SKILLS = [
             {
                 'erfolgswert': '18',
                 'kosten': 800
+            }
+        ]
+    },
+    {
+        'name': 'Talisman verzaubern',
+        'erstkosten': 400,
+        'startwert': '1',
+        'grund': [
+            'Th'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '13',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '17',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '18',
+                'kosten': 800
+            }
+        ]
+    },
+    {
+        'name': 'Tanzen',
+        'erstkosten': 100,
+        'grund': [
+            'BW',
+            'Ba',
+            'Gl',
+            'Sc'
+        ],
+        'ausnahme': []
+    },
+    {
+        'name': 'Tarnen',
+        'erstkosten': 400,
+        'startwert': '2',
+        'grund': [
+            'As',
+            'BW',
+            'BS',
+            'BN',
+            'Gl',
+            'Sp',
+            'Wa',
+            'Dr'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '3',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '4',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '5',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '7',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 800
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 800
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 1600
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 1600
+            }
+        ]
+    },
+    {
+        'name': 'Tauchen',
+        'erstkosten': 200,
+        'startwert': '12',
+        'grund': [
+            'BN',
+            'BW',
+            'Se',
+            'Wa'
+        ],
+        'ausnahme': [
+            'BS',
+            'Be',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PT',
+            'PW',
+            'Th'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '13',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '17',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '18',
+                'kosten': 800
+            }
+        ]
+    },
+    {
+        'name': 'Tierkunde',
+        'erstkosten': 100,
+        'startwert': '2',
+        'grund': [
+            'Wa',
+            'Dr',
+            'Hl',
+            'PF',
+            'Sc'
+        ],
+        'ausnahme': [
+            'Kr',
+            'Or',
+            'Sö',
+            'Sp'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '3',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '4',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '5',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '7',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 400
+            }
+        ]
+    },
+    {
+        'name': 'Trinken',
+        'erstkosten': 100,
+        'grund': [
+            'BN',
+            'Gl',
+            'Se',
+            'Sö'
+        ],
+        'ausnahme': []
+    },
+    {
+        'name': 'Überleben',
+        'erstkosten': 50,
+        'startwert': '6',
+        'grund': [],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '7',
+                'kosten': 10
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 10
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 10
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 100
+            }
+        ]
+    },
+    {
+        'name': 'Verführen',
+        'erstkosten': 50,
+        'startwert': '8',
+        'grund': [
+            'Ba',
+            'Gl',
+            'Se'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Ma',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Th'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '9',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 400
+            }
+        ]
+    },
+    {
+        'name': 'Verhören',
+        'erstkosten': 200,
+        'startwert': '8',
+        'grund': [
+            'Hä',
+            'PH',
+            'PT'
+        ],
+        'ausnahme': [
+            'BN',
+            'BS',
+            'BW',
+            'Wa'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '9',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 800
+            }
+        ]
+    },
+    {
+        'name': 'Verkleiden',
+        'erstkosten': 50,
+        'startwert': '12',
+        'grund': [
+            'As',
+            'Gl',
+            'Sp'
+        ],
+        'ausnahme': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Kr',
+            'Ma',
+            'Or',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Sö',
+            'Th'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '13',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '17',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '18',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '19',
+                'kosten': 250
+            }
+        ]
+    },
+    {
+        'name': 'Wagenlenken',
+        'erstkosten': 100,
+        'startwert': '12',
+        'grund': [
+            'BS',
+            'Hä',
+            'Kr'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '13',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '14',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '15',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '16',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '17',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '18',
+                'kosten': 800
+            }
+        ]
+    },
+    {
+        'name': 'Wahrnehmung',
+        'erstkosten': 400,
+        'startwert': '4',
+        'grund': [
+            'As',
+            'BN',
+            'BS',
+            'BW',
+            'Hä',
+            'Se',
+            'Sp',
+            'Wa',
+            'Dr'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '5',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 400
+            }
+        ]
+    },
+    {
+        'name': 'Winden',
+        'erstkosten': 250,
+        'startwert': '2',
+        'grund': [
+            'As',
+            'Sp'
+        ],
+        'ausnahme': [
+            'Kr',
+            'Or',
+            'Sö',
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Th'
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '3',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '4',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '5',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 400
+            }
+        ]
+    },
+    {
+        'name': 'Wissen von der Magie',
+        'erstkosten': 5000,
+        'grund': [
+            'Be',
+            'Dr',
+            'Hl',
+            'Hx',
+            'Ma',
+            'PF',
+            'PH',
+            'PK',
+            'PM',
+            'PT',
+            'PW',
+            'Sc',
+            'Th'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '5',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 400
+            }
+        ]
+    },
+    {
+        'name': 'Sagenkunde',
+        'erstkosten': 100,
+        'startwert': '2',
+        'grund': [
+            'Ba',
+            'Hx',
+            'Ma',
+            'PW',
+            'Th'
+        ],
+        'ausnahme': [
+            'As',
+            'BN',
+            'BS',
+            'BW',
+            'Gl',
+            'Kr',
+            'Or',
+            'Se',
+            'Sö',
+            'Wa',
+        ],
+        'verbesserungen': [
+            {
+                'erfolgswert': '3',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '4',
+                'kosten': 20
+            },
+            {
+                'erfolgswert': '5',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '6',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '7',
+                'kosten': 50
+            },
+            {
+                'erfolgswert': '8',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '9',
+                'kosten': 100
+            },
+            {
+                'erfolgswert': '10',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '11',
+                'kosten': 200
+            },
+            {
+                'erfolgswert': '12',
+                'kosten': 400
+            },
+            {
+                'erfolgswert': '13',
+                'kosten': 400
+            }
+        ]
+    },
+    {
+        'name': 'Zeichensprache',
+        'erstkosten': 20,
+        'startwert': '1',
+        'grund': [
+            'Gl',
+            'Hä',
+            'Se',
+            'Sp'
+        ],
+        'ausnahme': [],
+        'verbesserungen': [
+            {
+                'erfolgswert': '2',
+                'kosten': 30
+            },
+            {
+                'erfolgswert': '3',
+                'kosten': 150
             }
         ]
     }
